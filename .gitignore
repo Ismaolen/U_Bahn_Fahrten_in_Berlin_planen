@@ -1,3 +1,6 @@
+# Build directory
+/cmake-build*
+/.idea
 # Prerequisites
 *.d
 
