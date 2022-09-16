@@ -13,7 +13,7 @@ file(GLOB GLSOURCES ${GRAPHLIB_DIR}/*.h ${GRAPHLIB_DIR}/*.cpp)
 file(GLOB HEADER_FILES include/*.h)
 file(GLOB SOURCE_FILES include/*.cpp)
 
-add_executable(project ${HEADER_FILES} ${GLSOURCES} ${SOURCE_FILES} main.cpp)
+add_executable(project ${HEADER_FILES} ${GLSOURCES} ${SOURCE_FILES} main.cpp include/Network.cpp include/Network.h include/UI.cpp include/UI.h include/Route.cpp include/Route.h)
 
 target_include_directories(project PUBLIC ${GRAPHLIB_DIR})
 target_include_directories(project PUBLIC include)

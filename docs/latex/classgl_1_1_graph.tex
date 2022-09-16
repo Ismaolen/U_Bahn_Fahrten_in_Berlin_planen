@@ -1,0 +1,118 @@
+\hypertarget{classgl_1_1_graph}{}\doxysection{gl\+::Graph Class Reference}
+\label{classgl_1_1_graph}\index{gl::Graph@{gl::Graph}}
+
+
+\mbox{\hyperlink{classgl_1_1_graph}{Graph}} is the base clase representing a graph as parent of nodes and edges.  
+
+
+
+
+{\ttfamily \#include $<$graph.\+h$>$}
+
+
+
+Inheritance diagram for gl\+::Graph\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgl_1_1_graph_ad3b50f32c502938cdb47fe2eafeb2b9d}\label{classgl_1_1_graph_ad3b50f32c502938cdb47fe2eafeb2b9d}} 
+virtual \mbox{\hyperlink{classgl_1_1_graph_ad3b50f32c502938cdb47fe2eafeb2b9d}{$\sim$\+Graph}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for graph The destructor destroys all remaining edges and nodes connected for this graph. \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{classgl_1_1_node}{Node}} $\ast$ $>$ \& \mbox{\hyperlink{classgl_1_1_graph_a22e6e5bfa77eab669db9c63a20737e58}{nodes}} ()
+\begin{DoxyCompactList}\small\item\em Member function returning a reference to the list of nodes connected to this graph. \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{classgl_1_1_edge}{Edge}} $\ast$ $>$ \& \mbox{\hyperlink{classgl_1_1_graph_aea3073686ce73503d92c5bad28168e29}{edges}} ()
+\begin{DoxyCompactList}\small\item\em Member function returning a reference to the list of edges connected to this graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgl_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classgl_1_1_graph_aa3a6aae206d5d15135d56c001910efcb}{find\+Node}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Member function returning the pointer to the node with the given name, if such node exists. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classgl_1_1_edge}{Edge}} $\ast$ $>$ \mbox{\hyperlink{classgl_1_1_graph_aa70a7f9c7fbfd814ba5f73afe317841b}{find\+Edges}} (const \mbox{\hyperlink{classgl_1_1_node}{Node}} \&src, const \mbox{\hyperlink{classgl_1_1_node}{Node}} \&dst) const
+\begin{DoxyCompactList}\small\item\em Member function returning a vector of pointers to all edges connecting the source and destination node, and an empty vector if no such edges exist. \end{DoxyCompactList}\item 
+std\+::deque$<$ \mbox{\hyperlink{classgl_1_1_edge}{Edge}} $\ast$ $>$ \mbox{\hyperlink{classgl_1_1_graph_a70c7c3ec96070cfe734082ca406925d8}{dijkstra}} (const \mbox{\hyperlink{classgl_1_1_node}{Node}} \&src, const \mbox{\hyperlink{classgl_1_1_node}{Node}} \&dst) const
+\begin{DoxyCompactList}\small\item\em Member function returning a vector of pointers to all edges connecting the source and destination node, and an empty vector if no such edges exist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgl_1_1_graph_ad07921a58f30615bd724446894abf33b}\label{classgl_1_1_graph_ad07921a58f30615bd724446894abf33b}} 
+std\+::list$<$ \mbox{\hyperlink{classgl_1_1_node}{Node}} $\ast$ $>$ {\bfseries m\+\_\+nodes}
+\item 
+\mbox{\Hypertarget{classgl_1_1_graph_a3206a001254c9a6ddad24a5af0674ccd}\label{classgl_1_1_graph_a3206a001254c9a6ddad24a5af0674ccd}} 
+std\+::list$<$ \mbox{\hyperlink{classgl_1_1_edge}{Edge}} $\ast$ $>$ {\bfseries m\+\_\+edges}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classgl_1_1_graph}{Graph}} is the base clase representing a graph as parent of nodes and edges. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgl_1_1_graph_a70c7c3ec96070cfe734082ca406925d8}\label{classgl_1_1_graph_a70c7c3ec96070cfe734082ca406925d8}} 
+\index{gl::Graph@{gl::Graph}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!gl::Graph@{gl::Graph}}
+\doxysubsubsection{\texorpdfstring{dijkstra()}{dijkstra()}}
+{\footnotesize\ttfamily std\+::deque$<$ \mbox{\hyperlink{classgl_1_1_edge}{Edge}} $\ast$ $>$ gl\+::\+Graph\+::dijkstra (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgl_1_1_node}{Node}} \&}]{src,  }\item[{const \mbox{\hyperlink{classgl_1_1_node}{Node}} \&}]{dst }\end{DoxyParamCaption}) const}
+
+
+
+Member function returning a vector of pointers to all edges connecting the source and destination node, and an empty vector if no such edges exist. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries{std\+::vector$<$\+Edge$\ast$$>$}} vector of pointers to all edges connecting the given node, or empty vector ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgl_1_1_graph_aea3073686ce73503d92c5bad28168e29}\label{classgl_1_1_graph_aea3073686ce73503d92c5bad28168e29}} 
+\index{gl::Graph@{gl::Graph}!edges@{edges}}
+\index{edges@{edges}!gl::Graph@{gl::Graph}}
+\doxysubsubsection{\texorpdfstring{edges()}{edges()}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{classgl_1_1_edge}{Edge}}$\ast$$>$\& gl\+::\+Graph\+::edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Member function returning a reference to the list of edges connected to this graph. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries{std\+::list$<$\+Edge$\ast$$>$\&}} reference of the list of edges 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgl_1_1_graph_aa70a7f9c7fbfd814ba5f73afe317841b}\label{classgl_1_1_graph_aa70a7f9c7fbfd814ba5f73afe317841b}} 
+\index{gl::Graph@{gl::Graph}!findEdges@{findEdges}}
+\index{findEdges@{findEdges}!gl::Graph@{gl::Graph}}
+\doxysubsubsection{\texorpdfstring{findEdges()}{findEdges()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classgl_1_1_edge}{Edge}} $\ast$ $>$ gl\+::\+Graph\+::find\+Edges (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgl_1_1_node}{Node}} \&}]{src,  }\item[{const \mbox{\hyperlink{classgl_1_1_node}{Node}} \&}]{dst }\end{DoxyParamCaption}) const}
+
+
+
+Member function returning a vector of pointers to all edges connecting the source and destination node, and an empty vector if no such edges exist. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries{std\+::vector$<$\+Edge$\ast$$>$}} vector of pointers to all edges connecting the given node, or empty vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgl_1_1_graph_aa3a6aae206d5d15135d56c001910efcb}\label{classgl_1_1_graph_aa3a6aae206d5d15135d56c001910efcb}} 
+\index{gl::Graph@{gl::Graph}!findNode@{findNode}}
+\index{findNode@{findNode}!gl::Graph@{gl::Graph}}
+\doxysubsubsection{\texorpdfstring{findNode()}{findNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgl_1_1_node}{Node}} $\ast$ gl\+::\+Graph\+::find\+Node (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Member function returning the pointer to the node with the given name, if such node exists. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries{Node$\ast$}} pointer to the node with the specified name if such nodes exists, or nullptr otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgl_1_1_graph_a22e6e5bfa77eab669db9c63a20737e58}\label{classgl_1_1_graph_a22e6e5bfa77eab669db9c63a20737e58}} 
+\index{gl::Graph@{gl::Graph}!nodes@{nodes}}
+\index{nodes@{nodes}!gl::Graph@{gl::Graph}}
+\doxysubsubsection{\texorpdfstring{nodes()}{nodes()}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{classgl_1_1_node}{Node}}$\ast$$>$\& gl\+::\+Graph\+::nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Member function returning a reference to the list of nodes connected to this graph. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries{std\+::list$<$\+Node$\ast$$>$\&}} reference of the list of nodes 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ismail/\+Schreibtisch/co-\/ws2021-\/ismail-\/alshuaybi/c23\+\_\+project/lib/\+Graph\+Lib/\mbox{\hyperlink{graph_8h}{graph.\+h}}\item 
+/home/ismail/\+Schreibtisch/co-\/ws2021-\/ismail-\/alshuaybi/c23\+\_\+project/lib/\+Graph\+Lib/graph.\+cpp\end{DoxyCompactItemize}

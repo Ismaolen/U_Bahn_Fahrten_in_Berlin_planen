@@ -1,0 +1,170 @@
+\hypertarget{classgl_1_1_node}{}\doxysection{gl\+::Node Class Reference}
+\label{classgl_1_1_node}\index{gl::Node@{gl::Node}}
+
+
+\mbox{\hyperlink{classgl_1_1_node}{Node}} is the base clase representing nodes (vertices) in a graph.  
+
+
+
+
+{\ttfamily \#include $<$node.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgl_1_1_node_aafb65bfde1133cbb4ce668d693995a01}{Node}} (\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&\mbox{\hyperlink{classgl_1_1_node_acaf2e71c1f94bce45f918006ec598ea4}{graph}}, std\+::string \mbox{\hyperlink{classgl_1_1_node_ab8f5187261219f657d10a4862553f334}{name}})
+\begin{DoxyCompactList}\small\item\em Constructor to create a new named node The constructor registers the node with the parent graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgl_1_1_node_a30ffef8893b7ae9b4590f9adc7875d0f}{Node}} (\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&\mbox{\hyperlink{classgl_1_1_node_acaf2e71c1f94bce45f918006ec598ea4}{graph}})
+\begin{DoxyCompactList}\small\item\em Constructor to create a new node and assign a auto-\/generated name to it The constructor registers the node with the parent graph The auto-\/generated name follows the \char`\"{}\+Node\+\_\+0001\char`\"{}, \char`\"{}\+Node\+\_\+0002\char`\"{}, etc. convention. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgl_1_1_node_ae942c9851a85a367f26f92a4a62268bc}\label{classgl_1_1_node_ae942c9851a85a367f26f92a4a62268bc}} 
+virtual \mbox{\hyperlink{classgl_1_1_node_ae942c9851a85a367f26f92a4a62268bc}{$\sim$\+Node}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for node The destructor destroys the connected edges and deregisters the node from the parent graph before destroying. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classgl_1_1_node_ab8f5187261219f657d10a4862553f334}{name}} () const
+\begin{DoxyCompactList}\small\item\em Virtual constant member function returning the name (description) of the node as string. \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{classgl_1_1_edge}{Edge}} $\ast$ $>$ \& \mbox{\hyperlink{classgl_1_1_node_a7d7563d736a24838138670e264ea8956}{out\+Edges}} ()
+\begin{DoxyCompactList}\small\item\em Member function returning a reference to the list of outgoing edges. \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{classgl_1_1_edge}{Edge}} $\ast$ $>$ \& \mbox{\hyperlink{classgl_1_1_node_a9b8904ab54d917efc61d66ec66ea0a53}{in\+Edges}} ()
+\begin{DoxyCompactList}\small\item\em Member function returning a reference to the list of incoming edges. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classgl_1_1_graph}{Graph}} \& \mbox{\hyperlink{classgl_1_1_node_acaf2e71c1f94bce45f918006ec598ea4}{graph}} () const
+\begin{DoxyCompactList}\small\item\em Constant member function returning a const reference to the parent graph of the node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgl_1_1_node_ac1630dba9df99d2445865fa80b1ad571}\label{classgl_1_1_node_ac1630dba9df99d2445865fa80b1ad571}} 
+static int {\bfseries s\+\_\+instance\+\_\+number} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classgl_1_1_node_a7a9eeb9777c59bfc82b4eff6f8df1cc6}{operator==}} (const \mbox{\hyperlink{classgl_1_1_node}{Node}} \&lhs, const \mbox{\hyperlink{classgl_1_1_node}{Node}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Comparison operator as friend function, returning true if two nodes are identical (not just having the same member variable content) \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{classgl_1_1_node_ada22d1a125cc70e462992da2385c04a1}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classgl_1_1_node}{Node}} \&node)
+\begin{DoxyCompactList}\small\item\em Streaming operator as friend function, streaming the return value of the \mbox{\hyperlink{classgl_1_1_node_ab8f5187261219f657d10a4862553f334}{name()}} function to the output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classgl_1_1_node}{Node}} is the base clase representing nodes (vertices) in a graph. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgl_1_1_node_aafb65bfde1133cbb4ce668d693995a01}\label{classgl_1_1_node_aafb65bfde1133cbb4ce668d693995a01}} 
+\index{gl::Node@{gl::Node}!Node@{Node}}
+\index{Node@{Node}!gl::Node@{gl::Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily gl\+::\+Node\+::\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&}]{graph,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Constructor to create a new named node The constructor registers the node with the parent graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & parent graph \\
+\hline
+{\em name} & name of the node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgl_1_1_node_a30ffef8893b7ae9b4590f9adc7875d0f}\label{classgl_1_1_node_a30ffef8893b7ae9b4590f9adc7875d0f}} 
+\index{gl::Node@{gl::Node}!Node@{Node}}
+\index{Node@{Node}!gl::Node@{gl::Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily gl\+::\+Node\+::\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&}]{graph }\end{DoxyParamCaption})}
+
+
+
+Constructor to create a new node and assign a auto-\/generated name to it The constructor registers the node with the parent graph The auto-\/generated name follows the \char`\"{}\+Node\+\_\+0001\char`\"{}, \char`\"{}\+Node\+\_\+0002\char`\"{}, etc. convention. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & parent graph \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgl_1_1_node_acaf2e71c1f94bce45f918006ec598ea4}\label{classgl_1_1_node_acaf2e71c1f94bce45f918006ec598ea4}} 
+\index{gl::Node@{gl::Node}!graph@{graph}}
+\index{graph@{graph}!gl::Node@{gl::Node}}
+\doxysubsubsection{\texorpdfstring{graph()}{graph()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classgl_1_1_graph}{Graph}}\& gl\+::\+Node\+::graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constant member function returning a const reference to the parent graph of the node. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries{\mbox{\hyperlink{classgl_1_1_graph}{Graph}}\&}} const reference to the parent graph of the node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgl_1_1_node_a9b8904ab54d917efc61d66ec66ea0a53}\label{classgl_1_1_node_a9b8904ab54d917efc61d66ec66ea0a53}} 
+\index{gl::Node@{gl::Node}!inEdges@{inEdges}}
+\index{inEdges@{inEdges}!gl::Node@{gl::Node}}
+\doxysubsubsection{\texorpdfstring{inEdges()}{inEdges()}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{classgl_1_1_edge}{Edge}}$\ast$$>$\& gl\+::\+Node\+::in\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Member function returning a reference to the list of incoming edges. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries{std\+::list$<$\+Edge$\ast$$>$\&}} reference of the list of incoming edges 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgl_1_1_node_ab8f5187261219f657d10a4862553f334}\label{classgl_1_1_node_ab8f5187261219f657d10a4862553f334}} 
+\index{gl::Node@{gl::Node}!name@{name}}
+\index{name@{name}!gl::Node@{gl::Node}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual std\+::string gl\+::\+Node\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual constant member function returning the name (description) of the node as string. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries{std\+::string}} the name of the node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgl_1_1_node_a7d7563d736a24838138670e264ea8956}\label{classgl_1_1_node_a7d7563d736a24838138670e264ea8956}} 
+\index{gl::Node@{gl::Node}!outEdges@{outEdges}}
+\index{outEdges@{outEdges}!gl::Node@{gl::Node}}
+\doxysubsubsection{\texorpdfstring{outEdges()}{outEdges()}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{classgl_1_1_edge}{Edge}}$\ast$$>$\& gl\+::\+Node\+::out\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Member function returning a reference to the list of outgoing edges. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries{std\+::list$<$\+Edge$\ast$$>$\&}} reference of the list of outgoing edges 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classgl_1_1_node_ada22d1a125cc70e462992da2385c04a1}\label{classgl_1_1_node_ada22d1a125cc70e462992da2385c04a1}} 
+\index{gl::Node@{gl::Node}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!gl::Node@{gl::Node}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classgl_1_1_node}{Node}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Streaming operator as friend function, streaming the return value of the \mbox{\hyperlink{classgl_1_1_node_ab8f5187261219f657d10a4862553f334}{name()}} function to the output stream. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries{std\+::ostream\&}} reference to the output stream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgl_1_1_node_a7a9eeb9777c59bfc82b4eff6f8df1cc6}\label{classgl_1_1_node_a7a9eeb9777c59bfc82b4eff6f8df1cc6}} 
+\index{gl::Node@{gl::Node}!operator==@{operator==}}
+\index{operator==@{operator==}!gl::Node@{gl::Node}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgl_1_1_node}{Node}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classgl_1_1_node}{Node}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Comparison operator as friend function, returning true if two nodes are identical (not just having the same member variable content) 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries{bool}} true if the two nodes are identical, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ismail/\+Schreibtisch/co-\/ws2021-\/ismail-\/alshuaybi/c23\+\_\+project/lib/\+Graph\+Lib/\mbox{\hyperlink{node_8h}{node.\+h}}\item 
+/home/ismail/\+Schreibtisch/co-\/ws2021-\/ismail-\/alshuaybi/c23\+\_\+project/lib/\+Graph\+Lib/node.\+cpp\end{DoxyCompactItemize}

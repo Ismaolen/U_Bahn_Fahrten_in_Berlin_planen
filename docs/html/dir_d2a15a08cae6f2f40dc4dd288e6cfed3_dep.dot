@@ -1,0 +1,8 @@
+digraph "/home/ismail/Schreibtisch/c23_project/unit-tests" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  dir_d2a15a08cae6f2f40dc4dd288e6cfed3 [shape=box, label="unit-tests", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_d2a15a08cae6f2f40dc4dd288e6cfed3.html"];
+  dir_97aefd0d527b934f1d99a682da8fe6a9 [shape=box label="lib" fillcolor="white" style="filled" color="red" URL="dir_97aefd0d527b934f1d99a682da8fe6a9.html"];
+  dir_d2a15a08cae6f2f40dc4dd288e6cfed3->dir_97aefd0d527b934f1d99a682da8fe6a9 [headlabel="3", labeldistance=1.5 headhref="dir_000009_000007.html"];
+}

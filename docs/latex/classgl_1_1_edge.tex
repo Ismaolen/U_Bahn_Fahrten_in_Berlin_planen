@@ -1,0 +1,190 @@
+\hypertarget{classgl_1_1_edge}{}\doxysection{gl\+::Edge Class Reference}
+\label{classgl_1_1_edge}\index{gl::Edge@{gl::Edge}}
+
+
+\mbox{\hyperlink{classgl_1_1_edge}{Edge}} is the base clase representing unidirectional edges (arrows, flows) in a graph.  
+
+
+
+
+{\ttfamily \#include $<$edge.\+h$>$}
+
+
+
+Inheritance diagram for gl\+::Edge\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgl_1_1_edge_ac58d3fe3c6a5236d24b8e7783a1bbd46}{Edge}} (\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&graph, \mbox{\hyperlink{classgl_1_1_node}{Node}} \&src, \mbox{\hyperlink{classgl_1_1_node}{Node}} \&dst)
+\begin{DoxyCompactList}\small\item\em Constructor to create a new edge between source and destination node The constructor registers the edge with the parent graph and with the connected nodes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgl_1_1_edge_a0f103b17420b0688252bff69b15e4490}{Edge}} (const \mbox{\hyperlink{classgl_1_1_edge}{Edge}} \&other)
+\begin{DoxyCompactList}\small\item\em Constructor to create a new edge as a copy of an existing edge The constructor registers the edge with the parent graph and with the connected edges. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgl_1_1_edge_a079cb82aef9874458c2be6ff3f44cac1}\label{classgl_1_1_edge_a079cb82aef9874458c2be6ff3f44cac1}} 
+virtual \mbox{\hyperlink{classgl_1_1_edge_a079cb82aef9874458c2be6ff3f44cac1}{$\sim$\+Edge}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for edge The destructor deregisters the edge from the connected nodes and from the graph before destroying. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgl_1_1_edge_a522cad441cc9ce20aaa137e72e824f53}{is\+Connected\+To}} (const \mbox{\hyperlink{classgl_1_1_node}{Node}} \&node) const
+\begin{DoxyCompactList}\small\item\em Constant member function checking if a node is connected to this edge. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgl_1_1_node}{Node}} \& \mbox{\hyperlink{classgl_1_1_edge_a1007a9355977347e18833b437f635d31}{source}} ()
+\begin{DoxyCompactList}\small\item\em Member function returning a reference of the source node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgl_1_1_node}{Node}} \& \mbox{\hyperlink{classgl_1_1_edge_a72fb5228e597e61511de46a1c01e666d}{destination}} ()
+\begin{DoxyCompactList}\small\item\em Member function returning a reference of the destination node. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classgl_1_1_edge_acbf0d9e4e89497298783559a0210286e}{weight}} () const
+\begin{DoxyCompactList}\small\item\em Virtual constant member function defining the weight (or distance, or cost) of the edge Currently set to 1.\+0, so the shortest path algorithm searches for the path with the least number of edges involved. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgl_1_1_edge_a61d49ba4914bd136056671d2bd0f7b8a}\label{classgl_1_1_edge_a61d49ba4914bd136056671d2bd0f7b8a}} 
+virtual int {\bfseries time} () const
+\item 
+\mbox{\Hypertarget{classgl_1_1_edge_ac0837225d07b42639e51ac4856533d06}\label{classgl_1_1_edge_ac0837225d07b42639e51ac4856533d06}} 
+virtual std\+::string {\bfseries line} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const std\+::string \mbox{\hyperlink{classgl_1_1_edge_a292ae513e81f44fec0b0c185ca90f654}{name}} () const
+\begin{DoxyCompactList}\small\item\em Virtual constant member function returning a description of the edge as string \mbox{\hyperlink{classgl_1_1_edge}{Edge}} as base class does not have a name by its own, but builds the string from the names of the connected nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classgl_1_1_edge_a211c3a774dce0f3c74fbec1ca298e7b7}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classgl_1_1_edge}{Edge}} \&edge)
+\begin{DoxyCompactList}\small\item\em Streaming operator as friend function, streaming the return value of the \mbox{\hyperlink{classgl_1_1_edge_a292ae513e81f44fec0b0c185ca90f654}{name()}} function to the output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classgl_1_1_edge}{Edge}} is the base clase representing unidirectional edges (arrows, flows) in a graph. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgl_1_1_edge_ac58d3fe3c6a5236d24b8e7783a1bbd46}\label{classgl_1_1_edge_ac58d3fe3c6a5236d24b8e7783a1bbd46}} 
+\index{gl::Edge@{gl::Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!gl::Edge@{gl::Edge}}
+\doxysubsubsection{\texorpdfstring{Edge()}{Edge()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily gl\+::\+Edge\+::\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&}]{graph,  }\item[{\mbox{\hyperlink{classgl_1_1_node}{Node}} \&}]{src,  }\item[{\mbox{\hyperlink{classgl_1_1_node}{Node}} \&}]{dst }\end{DoxyParamCaption})}
+
+
+
+Constructor to create a new edge between source and destination node The constructor registers the edge with the parent graph and with the connected nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & parent graph \\
+\hline
+{\em src} & source node \\
+\hline
+{\em dst} & destination node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgl_1_1_edge_a0f103b17420b0688252bff69b15e4490}\label{classgl_1_1_edge_a0f103b17420b0688252bff69b15e4490}} 
+\index{gl::Edge@{gl::Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!gl::Edge@{gl::Edge}}
+\doxysubsubsection{\texorpdfstring{Edge()}{Edge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily gl\+::\+Edge\+::\+Edge (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgl_1_1_edge}{Edge}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Constructor to create a new edge as a copy of an existing edge The constructor registers the edge with the parent graph and with the connected edges. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & existing edge \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgl_1_1_edge_a72fb5228e597e61511de46a1c01e666d}\label{classgl_1_1_edge_a72fb5228e597e61511de46a1c01e666d}} 
+\index{gl::Edge@{gl::Edge}!destination@{destination}}
+\index{destination@{destination}!gl::Edge@{gl::Edge}}
+\doxysubsubsection{\texorpdfstring{destination()}{destination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgl_1_1_node}{Node}}\& gl\+::\+Edge\+::destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Member function returning a reference of the destination node. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries{\mbox{\hyperlink{classgl_1_1_node}{Node}}\&}} reference of the destination node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgl_1_1_edge_a522cad441cc9ce20aaa137e72e824f53}\label{classgl_1_1_edge_a522cad441cc9ce20aaa137e72e824f53}} 
+\index{gl::Edge@{gl::Edge}!isConnectedTo@{isConnectedTo}}
+\index{isConnectedTo@{isConnectedTo}!gl::Edge@{gl::Edge}}
+\doxysubsubsection{\texorpdfstring{isConnectedTo()}{isConnectedTo()}}
+{\footnotesize\ttfamily bool gl\+::\+Edge\+::is\+Connected\+To (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgl_1_1_node}{Node}} \&}]{node }\end{DoxyParamCaption}) const}
+
+
+
+Constant member function checking if a node is connected to this edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & const reference of node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{bool}} true if node is connected to this edge (either as source or destination node), and false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgl_1_1_edge_a292ae513e81f44fec0b0c185ca90f654}\label{classgl_1_1_edge_a292ae513e81f44fec0b0c185ca90f654}} 
+\index{gl::Edge@{gl::Edge}!name@{name}}
+\index{name@{name}!gl::Edge@{gl::Edge}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string gl\+::\+Edge\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Virtual constant member function returning a description of the edge as string \mbox{\hyperlink{classgl_1_1_edge}{Edge}} as base class does not have a name by its own, but builds the string from the names of the connected nodes. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries{std\+::string}} the description of the edge, in the format \char`\"{}source -\/$>$ destination\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgl_1_1_edge_a1007a9355977347e18833b437f635d31}\label{classgl_1_1_edge_a1007a9355977347e18833b437f635d31}} 
+\index{gl::Edge@{gl::Edge}!source@{source}}
+\index{source@{source}!gl::Edge@{gl::Edge}}
+\doxysubsubsection{\texorpdfstring{source()}{source()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgl_1_1_node}{Node}}\& gl\+::\+Edge\+::source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Member function returning a reference of the source node. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries{\mbox{\hyperlink{classgl_1_1_node}{Node}}\&}} reference of the source node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgl_1_1_edge_acbf0d9e4e89497298783559a0210286e}\label{classgl_1_1_edge_acbf0d9e4e89497298783559a0210286e}} 
+\index{gl::Edge@{gl::Edge}!weight@{weight}}
+\index{weight@{weight}!gl::Edge@{gl::Edge}}
+\doxysubsubsection{\texorpdfstring{weight()}{weight()}}
+{\footnotesize\ttfamily virtual double gl\+::\+Edge\+::weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual constant member function defining the weight (or distance, or cost) of the edge Currently set to 1.\+0, so the shortest path algorithm searches for the path with the least number of edges involved. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]This function must be overwritten to adapt the behavior of the Djikstra algorithm \end{DoxyRefDesc}
+\begin{DoxyReturn}{Returns}
+{\bfseries{double}} the value representing the weight (or distance or cost) of the edge 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_route_a0967037f403d84f11669e1da09448431}{Route}}, and \mbox{\hyperlink{class_route_a0967037f403d84f11669e1da09448431}{Route}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classgl_1_1_edge_a211c3a774dce0f3c74fbec1ca298e7b7}\label{classgl_1_1_edge_a211c3a774dce0f3c74fbec1ca298e7b7}} 
+\index{gl::Edge@{gl::Edge}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!gl::Edge@{gl::Edge}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classgl_1_1_edge}{Edge}} \&}]{edge }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Streaming operator as friend function, streaming the return value of the \mbox{\hyperlink{classgl_1_1_edge_a292ae513e81f44fec0b0c185ca90f654}{name()}} function to the output stream. 
+
+\begin{DoxyReturn}{Returns}
+{\bfseries{std\+::ostream\&}} reference to the output stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ismail/\+Schreibtisch/co-\/ws2021-\/ismail-\/alshuaybi/c23\+\_\+project/lib/\+Graph\+Lib/\mbox{\hyperlink{edge_8h}{edge.\+h}}\item 
+/home/ismail/\+Schreibtisch/co-\/ws2021-\/ismail-\/alshuaybi/c23\+\_\+project/lib/\+Graph\+Lib/edge.\+cpp\end{DoxyCompactItemize}

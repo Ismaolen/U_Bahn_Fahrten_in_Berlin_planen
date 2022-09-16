@@ -19,189 +19,191 @@ using namespace gl;
 using namespace gl;
 using namespace std;
 
-/// \brief Class Erstellung für Das Lesen der Inhalt eines Dateiees und Erstellung eines defualt Projekts
-/// Die Inputcopyklasse ist die Bassisklasse für den klass Outbutapp
-/// Die Klasse erbt die Daten und Implemniterung der Klasse Route, womit
+/// \brief Class Erstellung für Das Lesen der Inhalt eines Dateiees und dadurch werden die Daten in die Membervariablen
+/// deiser Klasse gespeichert und durch dieser klassen wernden bstimmte Operationen mit dem gespeicherten Daten durchgeführt
+/// Die Network ist die Bassisklasse für den klass UI
+/// Die Klasse erbt die Daten und Implemniterung der Klasse Graph, womit
 /// diese ihnen zur Verfügung stehen
-class Inputcopy: public Graph
+class Network: public Graph
 {
 public:
-    /// \brief Erstellung eines Standard Konstruktur
+    /// \brief Diese Member Funktion ändert die Name der Station an einer bestimmten Position in den Vector m_stationensortiert
+    /// \param eingabe Die neue Name für eine Station
+    /// \param stationzahl Die Position der Station in den vector m_stationsortiert die ihre Name geändert wird
+    void changeStationName(string eingabe, int stationzahl);
+
+    /// \brief Diese Member Funktion ändert die Distanz einer Strecke an einer bestimmten Position in den Vector m_distanzInKm
+    /// \param strecke_nummer  nummer der Streck die Ihre Distanz geändert wird
+    /// \param geanderte_distanz neue Distanz der statt die alten Distanz sein wird
+    void changeDistanz(int strecke_nummer, double geanderte_distanz);
 
 
-    /// \brief  liest den Inhalt eine Datei, fügt den zu der übegeben vectoren
-    /// Bekommt ein Datei name und leere vecktoren
-    /// Liest den Inhalt und speichert den in den übergebenen Variablen durch Referenz
-    /// \throw cerr falls eingegebene Datei nicht geöffnet werden kann
-    /// \param fileNamee übergebene Dateiname aus der die Daten eingelesen werden
-    /// \param linien Bahn linien welche aus der Datei eingelsen werden
-    /// \param stationenStart der Startstation alle Strecken
-    /// \param stationenTarget der target/Ziel alle Routers
-    /// \param distanzKm der Distanz alle strecken  in kilometer
-    /// \param dauerMin die dauer alle Strecken in Minute
-    void inputcopyy(string fileNamee);
+    /// \brief Diese Member Funktion ändert die Dauer einer Strecke an einer bestimmten Position in den Vector m_dauerInMin
+    /// \param strecke_nummer nummer der Streck die Ihre Dauer geändert wird
+    /// \param geanderte_dauer neue Dauer der statt die alten Dauer sein wird
+    void changeDuration(int strecke_nummer, double geanderte_dauer);
 
-    /// \brief addierte die übergebene string vectoren und fügt den zur den vector12 zu
-    /// \param vektor1  übergebene string vector1 welche addiert wird
-    /// \param vektor2 übergebene sring vector2 welche addiert wird
-    /// \param vector12 summe der Addition der string vectoren wird in dieses Vector gespeichert
-    void towVectorAddition();
 
-    /// \brief sortiert die übergebene string vector alphapetisch
-    ///  wird gebraucht um die stationen der Bahn zur alphapetisch zu sortieren
-    /// \param tosortstation der alphapetisch zusortiernde string vector
-    void sortStationen();
-
-    /// \brief löscht die Stationen die verdoppelt gespeichert worden sind
-    /// \param toDeletedopplestation string vector aus der die wiederholende stationen gelöscht werden
-    void deleteDuplicatedStation();
-
-    /// \brief Diese Funktion sammelt die Inhalte eines Bahnprojekts durch das lesen aus einer Datei und das Speicher der Inhalt in den bestimmten
-    ///  vectoren um damit arbeiten zu können
-    /// \param filenamee  der übergebene Dateiname aus der die Daten gelesen werden
-    /// \param linien in den wird die Bahn linien gespeichert
-    /// \param stationenbegin der Startstation alle Strecken
-    /// \param stationenend  der target/Ziel alle Routers
-    /// \param distanz_km    der Distanz alle strecken  in kilometer
-    /// \param distanz_min   die dauer alle Strecken in Minute
-    /// \param stationsortiert  Stetionen die alphapetisch gespeichert werden und wiederholende Stationen gelöscht werden
-    void stationSaveFromFileToStringVector(string filenamee);
-    void setStationName(string eingabe, int stationzahl);
-    void setDistanz(int strecke_nummer, double geanderte_distanz);
-    void setDuration(int strecke_nummer, double geanderte_dauer);
-    void deleteRoute(int ubahnzuandern);
-    void addNewStation1(int streckevor, string newStation, double ditanzstrecke1, double ditanzstrecke2, int dauerstrecke1, int dauerstrecke2);
-    void addNewStation2(int streckevor, string newStation, double ditanzstrecke1, int dauerstrecke1);
-
-    /// \brief druckt die bahn Stationen einer beliebige Grapgh aus
-    /// \param stationen die Name des Graphes
-    void printStationenNodes(Graph& stationen);
-
-    /// \brief druckt die strecken eine Graph aus
-    /// \param strecken Name des Graphes
-    void printRoute(Graph& strecken);
-
-    /// \return die linen eines bahnes
-    string getline(int position){return m_line[position];}
-
-    /// \return die startstation aller strecken
-    string getStationStart(int position){return m_stationstart[position];}
-
-    /// \return die targetstation aller strecken
-    vector<string> getStationTarget(){return m_stationtarget;}
-
-    /// \return die distanz aller strecken in km
-    vector<double> getDistanz(){return m_distanzInKm;}
-
-    /// \return die dauer aller strecken in min
-    vector<int> getDuration(){return m_dauerInMin;}
-
-    /// \return die alphapetisch srtierte stationen eines bahnes
-    string getStation(int position){return m_stationensortiert[position];}
-
-    /// \brief definiert die übergeben alphapetisch sortierte Stationen in den übergeben Graph
-    /// \param nodeingraphtodefintion Graph in der die übergebene Stationen definiert werden
-    /// \param inputsortieren  übergebene alpahpetisch sortierte Stationen
-    void nodeDefintion(Graph& nodeingraphtodefintion);
-
-    /// \brief definiert die übergebene Inhalte als strecken in den übergebene Graph
-    /// \param graph Graph in welche die strecken definiert werden
-    /// \param linien   Bahn linien die in den Bahn gespeichert werden
-    /// \param stationenbegin stationen start einer zu defniernde strecke
-    /// \param stationenend  stationen target einer zu defniernde strecke
-    /// \param distanz_km   distanz einer zu defniernde strecke  in km
-    /// \param distanz_min  dauer einer zu defniernde strecke in min
-    void defineRouteByDitanz(Graph &graph);
-
-    ///  \brief diese Funktion nimmt die Eingabe als nummer der Station und wndelt dieser zur int und gibt diese zurück
-    /// \param start  Nummer der startstation
-    /// \param target  Nummer der target Station
-    void inputStartTarget(int &start, int &target);
-
-    /// \brief nimmt die Nummer der Station und sucht nach dem bestemten Node in den übergebene Graph
-    /// \param input Name der Prapg in dem sich der bestimmte Node befindet
-    /// \param station die Station die den namen der alphapetisch sortierte stationen beinhaltet
-    /// \param inputsort die Station die den namen der alphapetisch sortierte stationen beinhaltet
-    /// \return Node der gesucht Node/ station
-    Node& findNode(Graph &input, int &station, vector<string>& inputsort);
-
-    /// Diese Funktion überprüft ob ein umstieg gibt und falls ja addiert die dauer 10 minuten
-    /// \param fahrplan beinhaltet die Fahrplan bzw. die Strecken des Fahrplanes als vecktor
-    /// \param total_time die Dauer der Fahrt
-    /// \param umsteigdauer speichert die line der strecken der fahrplan um zu gcken ob ein umstieg gebe oder nicht
-    void isLinechange(deque<Edge*> &fahrplan, int &total_time, vector<string>& umsteigdauer);
-
-    /// \brief druckt die Inhalt der strecken aus dem Fahplan durch die Ntzung der dijekstra Funktion und addiert 10 minuten
-    /// zu den gesammten dauer falls eine umstieg gebe
-    /// \param fahrplan die zu ausdrückende Fahrplan
-    /// \param time die zu ausdruckende totaltime der Fahrtplan
-    /// \param distanz die zu ausdruckende totaltime der Fahrtplan
-    /// \param umsteigdauer beinhaltet die alle linien der Fahrplan um zu gucken ob die line sich ändert und dadurch 10 min zu den totaltime zu addieren
-    void printTravelPlan(deque<Edge *> &fahrplan, int &time, double &distanz, vector<string> &umsteigdauer);
-    void fahrtPlanFinden(Graph& graph);
-
-    void printStationen();
-    void printStrecke();
-    ///  \brief diese Funktion liest die mögliche Inhalte aus der Datei Berlin.txt und speichert die Inahlte in den bestimmten vecktoren um eine mögliche Fahrplan zu erstellen
-    ///  dadurch wird ein gesammte Graph mit deine Ubah linen uns stationen und strcken erstellt
-    /// \param graph Graph in den die Linien und stationen und strecken definiert werden
-    /// \param filenameee  Di Dateiname aus der die Daten gelesen werden
-    void StationReadingFromBerlintxtfileAndNodeandEdgesDefintion(Graph& graph, string &filenameee);
-    void updateStation();
-
-    /// \brief erstellt eine Graph aus der übergebene Datei
-    /// \param filename gegebene Dateiname aus der die Daten gelsen werden
-
-    /// \brief setter Funktion to setted a Ubahn data
-
-    void setStation(string toset){
-        m_stationensortiert.push_back(toset);
-    }
+   /// \brief dieser Funktion pusht eine neue Elemnt in den Vector m_line
+   /// \param toset string der zu den vector m_line addiert wird
     void setLine(string toset){
         m_line.push_back(toset);
     }
+    /// \brief dieser Funktion pusht eine neue Elemnt in den Vector m_stationstart
+    /// \param toset  string der zu den vector m_stationstart addiert wird
     void setStart(string toset){
         m_stationstart.push_back(toset);
     }
+    /// \brief dieser Funktion pusht eine neue Elemnt in den Vector m_stationtarget
+    /// \param toset  string der zu den vector m_stationtarget addiert wird
     void settarget(string toset){
         m_stationtarget.push_back(toset);
     }
-    void setdistanz(double newdistanz){
+    /// \brief dieser Funktion pusht eine neue Elemnt in den Vector m_distanzInKm
+    /// \param newdistanz  double zahl der zu den vector m_distanzInKm addiert wird
+    void setDistanz(double newdistanz){
         m_distanzInKm.push_back(newdistanz);
     }
+    /// \brief dieser Funktion pusht eine neue Elemnt in den Vector m_dauerInMin
+    /// \param duration int zahl der zu den vector m_dauerInMin addiert wird
     void setDuration(int duration){
         m_dauerInMin.push_back(duration);
     }
 
+    /// \brief gibt die Name der Line einer Strecke an einer bestimmten Poisition
+    /// \param position die Position an einer bestimmten stelle in den Vector m_line
+    /// \return string LineName an eine bestimmten Position
+    string getline(int position){return m_line[position];}
 
-    /// \brief Getter Funktionen
-    /*
-    void getStation(vector<string>& stationen){
-        stationen = m_stationensortiert;
-    }
-    void getLine(vector<string>& line){
-        line = m_line;
-    }
-    void getStart(vector<string>& start){
-        start = m_stationstart;
-    }
-    void gettarget(vector<string>& target){
-        target =  m_stationtarget;
-    }
-    void getdistanz(vector<double>& distanz){
-        distanz = m_distanzInKm;
-    }
-    void getDuration(vector<int>& duration){
-        duration = m_dauerInMin;
-    }
-    */
-    void graphdefinition(Graph& graph);
+    /// \brief gibt die Name der startStation einer Strecke an einer bestimmten Poisition
+    /// \param position die Position an einer bestimmten stelle in den Vector m_stationstart
+    /// \return string Name der startStation an eine bestimmten Position
+    string getStationStart(int position){
+        return m_stationstart[position];}
 
+    /// \brief gibt die Name der Zielstation einer Strecke an einer bestimmten Poisition
+    /// \param position die Position an einer bestimmten stelle in den Vector m_stationtarget
+    /// \return string Name der Zielstation an eine bestimmten Position
+    string getStationTarget(int position){return m_stationtarget[position];}
+
+    /// \brief gibt die Distanz einer Strecke an einer bestimmten Poisition
+    /// \param position die Position an einer bestimmten stelle in den Vector m_distanzInKm
+    /// \return Distanz an eine bestimmten Position
+    double getDistanz(int position){return m_distanzInKm[position];}
+
+    /// \brief gibt die Dauer einer Strecke an einer bestimmten Poisition
+    /// \param position die Position an einer bestimmten stelle in den Vector m_dauerInMin
+    /// \return Dauer an eine bestimmten Position
+    int getDuration(int position){return m_dauerInMin[position];}
+
+    /// \brief gibt die Name der Station an einer bestimmten Poisition
+    /// \param position die Position an einer bestimmten stelle in den Vector m_stationensortiert
+    /// \return string Stationname an eine bestimmten Position
+    string getStation(int position){
+        return m_stationensortiert[position];
+    }
+
+    /// \brief Dieser getterfunktion gibt die Position der gesuchten string in den vector m_stationensortiert
+    /// \param gesuchtestation der string der gesucht wird
+    /// \return position der gesuchte string in den vector m_stationensortiert
+    int getStation(string gesuchtestation);
+
+    /// \brief Dieser Funktion löscht eine Strecke an einer bestimmten position, dabei werden zwei fälle unterschieden
+    /// 1- wenn die Strecke am ende eine Bahn sich befindet
+    /// 2- Wenn die strecke sich nicht am ende eine Bahn befindet
+    /// Die Unterscheidung dient dazu, dass der Ubahn nicht geschnitten wird
+    /// \param ubahnzuandern Nummer der Strecke die gelöscht wird
+    void deleteRoute(int ubahnzuandern);
+
+    /// \brief Dieser Funktion addiert einer neue Station zur eine Bahn, wenn die Strecke nicht die letzte strecke eine bestimmten Bahn ist
+    /// \param streckevor Nummer der Strecke, die dannach die neue Station hinzugefügt wird
+    /// \param newStation Namme der hinzufügende Station
+    /// \param ditanzstrecke1 Distanz der strecke zwischen zielstationn1 -> newstation
+    /// \param ditanzstrecke2 Distanz der strecke zwischen newstation -> zielstationn2
+    /// \param dauerstrecke1 Dauer der strecke zwischen zielstationn1 -> newstation
+    /// \param dauerstrecke2 Dauer der strecke zwischen newstation -> zielstationn2
+    void addNewStation1(int streckevor, string newStation, double ditanzstrecke1, double ditanzstrecke2, int dauerstrecke1, int dauerstrecke2);
+
+    /// \brief Dieser Funktion addiert einer neue Station zur eine Bahn, wenn die Strecke die letzte strecke eine bestimmten Bahn ist
+    /// \param streckevor
+    /// \param newStation Namme der hinzufügende Station
+    /// \param ditanzstrecke1 Distanz der strecke zwischen newstation -> zielstationn2
+    /// \param dauerstrecke1 Dauer der strecke zwischen newstation -> zielstationn2
+    void addNewStation2(int streckevor, string newStation, double ditanzstrecke1, int dauerstrecke1);
+
+    /// \brief druckt die bahn Stationen einer beliebige Grapgh aus
+    /// \param stationen die Name des Graphes
+    void printNodes(Graph& stationen);
+
+    /// \brief druckt die bahn strecken einer beliebige Grapgh aus
+    /// \param strecken die Name des Graphes
+    void printRoute(Graph& strecken);
+
+    /// \brief druckt die bahn Stationen, die im vector m_stationsortiert gespeichert sind, aus
+    void printm_Stationen();
+
+    /// \brief druckt die Strecken, die in den Vectoren der Klasse Network gespeichert sind, aus
+    void printm_Strecke();
+
+    /// \brief Durch dieser Funktion wird gekuckt ob ein Umstieg gibt, und falls ja dann wird 10 min zur totalTime addiert
+    /// Dieser erfolgt in dem vergleich der der Line wenn diese sich ändern dann gibt es einen Umstieg
+    /// \param fahrplan vector der den Fahrplan beinhaltet
+    /// \param total_time die zu ausdruckende totaltime der Fahrtplan
+    /// \param umsteigdauer beinhaltet die alle linien der Fahrplan um zu gucken ob die line sich ändert und dadurch 10 min zu den totaltime zu addieren
+    void isLinechange(deque<Edge*> &fahrplan, int &total_time, vector<string>& umsteigdauer);
+
+    /// \brief Dieser Funktion findet den gesuchten Node und gibt ihn zurück
+    /// \param graph in dem die Node exisitert und der Node gesucht wird
+    /// \param station Die Nummer der Name die in den gescuhten Node gespeichert ist
+    /// \param inputsort vector die alle Name von instalierten Nodes beinhaltet
+    /// \return gesuchte Node
+    Node& findNode(Graph &graph, int &station, vector<string>& inputsort);
+
+    /// \brief  liest den Inhalt eine Datei, fügt den zu den vectoren der Klasse Network
+    /// \throw GraphLibException falls eingegebene Datei nicht geöffnet werden kann oder nicht existiert
+    /// \param fileNamee übergebene Dateiname aus der die Daten eingelesen werden
+    void fileReading(string fileNamee);
+
+    /// \brief addierte die m_stationStart mit m_StationTarget und fügt den zur den m_stationsortiert zu
+    void towVectorAddition();
+
+    /// \brief sortiert die membervariable m_stationsortiert alphapetisch
+    ///  wird gebraucht um die stationen der Bahn zur alphapetisch zu sortieren
+    void alphapetischsortieren();
+
+    /// \brief löscht die Stationen die verdoppelt gespeichert worden sind in die membervariable m_srtationsortiert
+    void deleteDuplicatedStation();
+
+    /// \brief Dieser Funktion installiert die Nodes und nimmt die Namen der Nodes aus dem Vcetor m_stationsortiert in den übergeben Graph
+    /// \param graph Der Graph in den die Nodes installiert werden
+    void installNode(Graph& graph);
+
+    /// \brief Dieser Funktion installiert die Routes in den übergeben Graph
+    /// \param graph Der Graph in den die Routes installiert werden
+    void installRoute(Graph &graph);
+
+    /// \brief Diese Funtktion liest die Eingabe von drei Zahlen oder eine beliebeige Eingabe anzahlmöglichkeiten und falls
+    /// diese keine Zahlen beinhaltet dann wird ein Exeption ausgegeben
+    /// \throw std::invalid_argument falls die Eingabe fehlschlägt oder leer ist oder keine Zahlen beinhaltet
+    /// \param anzahlmoeglicheelemnte der höchste Zahl der eingegeben werden darf
+    /// \return die eingelsene Zahl als Int falls kein Exeption ausgegeben wird
+    int threePositiveIntFromStdin(vector<string> &anzahlmoeglicheelemnte);
+
+    /// \brief diese Funktion liest die eingabe von Nutzer als zahlen für den AUswahl eine beliebige Option
+    /// \throw std::invalid_argument() falls die eingabe keine int Zahlen ist oder großse als der Auswahlanzhl ist
+    /// \param groessee_als steht für den Anzahl der zu wählende Optionen
+    /// \param anzahlzahleneingabe steht für die Anzahl der stellen die eingegeben dürfen
+    /// \return die EIngabe als int Zahl falls keine throw ausgegeben wird
+    int onePositiveIntFromStdin(char groessee_als, int anzahlzahleneingabe);
+
+    /// \brief Dieser Funktion ist wie ein destruktor, der alle Membervariablen löscht
+    void Networkdestrokor();
 
 protected:
     vector<string> m_line, m_stationensortiert, m_stationtarget, m_stationstart;
     vector<double> m_distanzInKm;
     vector<int> m_dauerInMin;
+
 
 };
 
@@ -211,6 +213,14 @@ template<class T> T fromString(const std::string& s) //steht für die Umwandlung
     T t;
     stream >> t;
     return t;
+}
+template<typename T>        // um stellenanzahl in einer Zahl zu berechnen
+size_t countDigits(T n)
+{
+    string tmp;
+
+    tmp = to_string(n);
+    return tmp.size();
 }
 #ifndef C23_PROJECT_INPUTCOPY_H
 #define C23_PROJECT_INPUTCOPY_H

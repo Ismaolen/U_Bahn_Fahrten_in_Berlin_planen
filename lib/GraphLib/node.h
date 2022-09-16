@@ -37,7 +37,9 @@ namespace gl
 		//! @brief Virtual constant member function returning the name (description) of the node as string
 		//! @return @b std::string the name of the node
 		virtual std::string name() const { return m_name; }
-
+        /*  void changename(std::string xx)  {
+              m_name = xx;
+          }*/
 		//! @brief Member function returning a reference to the list of outgoing edges
 		//! @return @b std::list<Edge*>& reference of the list of outgoing edges
 		std::list<Edge*>& outEdges() { return m_out_edges; }

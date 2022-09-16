@@ -1,0 +1,38 @@
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysubsection{Rahmenbedingungen}\label{md__r_e_a_d_m_e_autotoc_md1}
+Ausgehend von einem vorgegebenen Lastenheft bearbeitet jede Person ein Software-\/\+Projekt und erstellt 
+\begin{DoxyEnumerate}
+\item Klassendiagramm (J\+P\+E\+G-\/ oder P\+N\+G-\/\+Format) 
+\item C++ Quellcode und Clion Projekt (.zip) 
+\item Ausführbares Programm 
+\item Tests und Testdokumentation 
+\end{DoxyEnumerate}
+
+Die Arbeitsergebnisse a, b und d geben Sie bitte über Moodle als Projektergebnis ab. Abgabetermin ist der 21.\+02.\+2022. ~\newline
+ Für jede Person wird es zusätzlich einen Einsichts Termin geben, wo kurz überprüft wird ob der Code selbständig erstellt wurde. (Termine sind in den 2 Wochen nach der Abgabe -\/ Online)\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysubsection{Kontext -\/ U-\/\+Bahn-\/\+Fahrten in Berlin planen}\label{md__r_e_a_d_m_e_autotoc_md2}
+Um die Attraktivität des öffentlichen Nahverkehrs in Berlin zu verbessern, plant die B\+VG die Einführung einer Software, die Touristen und Einwohner bei der Planung ihrer Fahrten mit der Berliner U-\/\+Bahn unterstützt. Die Software soll jeweils die kürzeste und/oder schnellste Verbindung zwischen zwei U-\/\+Bahn-\/\+Stationen ermitteln, und dabei Umsteigezeiten und ggf. Streckensperrungen Berücksichtigen.\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsection{Anforderungen}\label{md__r_e_a_d_m_e_autotoc_md3}
+Sie sollen eine Software schreiben (Konsolenanwendung), die die Verwaltung und Nutzung von Verbindungsdaten eines öffentlichen Verkehrsnetzes unterstützt. ~\newline
+ Die Software soll dem Benutzer folgende Funktionen zur Verfügung stellen\+:
+
+
+\begin{DoxyEnumerate}
+\item Die Software soll Netzdaten aus einer Datei einlesen und in eine Datei ausgeben können. Die Datei soll für jede Verbindung zwischen zwei Stationen folgende Struktur aufweisen\+: Linie Stationsname1 -\/$>$ Stationsname2\+: Entfernung-\/\+Km Zeitbedarf-\/\+Minuten 
+\item Netz-\/\+Daten sollen auch manuell in der Software eingegeben werden können und existierende Netz-\/\+Daten ergänzen oder ändern. 
+\item Die Software soll Netz-\/\+Daten (Haltestellen, Verbindungen zwischen Haltestellen, Linieninformationen) nach verschiedenen durch den Nutzer zu wählenden Auswahl-\/ und Ordnungskriterien sortiert als Bildschirmlisten ausgeben können. Folgende Kriterien sollen mindestens unterstützt werden\+: ~\newline
+ a. Nach Linie sortiert $\vert$ b. Alphabetisch sortiert. 
+\item Die Software soll die Auswahl beliebiger Start-\/ und Ziel-\/\+Stationen gestatten und dann die optimale Verbindung zwischen diesen Stationen berechnen und detailliert ausgeben. Die Nutzer sollen auswählen können, ob nach Zeitbedarf oder nach Entfernung optimiert werden soll. 
+\item Die Software soll an Umsteigebahnhöfen beim Wechseln von einer Linie auf die andere 10 Minuten Umsteigezeitbedarf einplanen. 
+\item Die Nutzer sollen die Software beenden können. Dabei soll die Möglichkeit bestehen, geänderte Netzdaten in eine Datei auszugeben. 
+\end{DoxyEnumerate}~\newline
+
+
+Die Software soll folgenden Randbedingungen entsprechen\+:
+\begin{DoxyItemize}
+\item Die Software soll die Netzdaten unter Nutzung der Graph\+Lib-\/\+Bibliothek verwalten, und optimale Wege unter Nutzung des in der Bibliothek umgesetzten Djikstra-\/\+Algorithmus ermitteln.
+\item Die Software soll Fehleingaben vermeiden (z.\+B. durch Nutzung von Auswahllisten statt der textuellen Eingabe von Stationsnamen) und soll sinnvoll auf Fehlersituationen reagieren. Zur Fehlerbehandlungen sollten Exceptions benutzt werden.
+\item Für die Implementierung der Software sollen vorzugsweise Klassen, Templates und Funktionen der C++-\/\+Standardbibliothek benutzt werden.
+\item Die Software soll bei Beendigung alle allokierten Speicherbereiche dediziert freigeben.
+\item Die Software soll den Vorgaben der Programmierrichtlinien entsprechen (siehe Moodle).
+\item Die Software soll umfassend mithilfe von Kommentaren im Doxygen-\/\+Stil dokumentiert sein.
+\item Die Software soll mithilfe der zur Verfügung gestellten Beispieldaten getestet sein.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{Bewertung}\label{md__r_e_a_d_m_e_autotoc_md4}
+ 

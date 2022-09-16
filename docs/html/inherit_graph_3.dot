@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="gl::Node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgl_1_1_node.html",tooltip="Node is the base clase representing nodes (vertices) in a graph."];
+}

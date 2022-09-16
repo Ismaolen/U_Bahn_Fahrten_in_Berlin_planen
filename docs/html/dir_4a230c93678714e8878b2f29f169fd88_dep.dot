@@ -1,0 +1,8 @@
+digraph "/home/ismail/Schreibtisch/c23_project/GraphLibUse" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  dir_4a230c93678714e8878b2f29f169fd88 [shape=box, label="GraphLibUse", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_4a230c93678714e8878b2f29f169fd88.html"];
+  dir_97aefd0d527b934f1d99a682da8fe6a9 [shape=box label="lib" fillcolor="white" style="filled" color="red" URL="dir_97aefd0d527b934f1d99a682da8fe6a9.html"];
+  dir_4a230c93678714e8878b2f29f169fd88->dir_97aefd0d527b934f1d99a682da8fe6a9 [headlabel="1", labeldistance=1.5 headhref="dir_000006_000007.html"];
+}

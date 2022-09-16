@@ -1,0 +1,254 @@
+\hypertarget{class_outbutapp}{}\doxysection{UI Class Reference}
+\label{class_outbutapp}\index{UI@{UI}}
+
+
+Class erstellt die Ausgabe Programm und bietet verschieden möglichkeiten um die Strecke zu fineden oder Daten eines erstellten Bahnes zu ändern oder hinzufügen Die Klasse erbt die Daten und Implemniterung der Klasse \mbox{\hyperlink{class_inputcopy}{Network}}, womit diese ihnen zur Verfügung stehen.
+
+
+
+
+{\ttfamily \#include $<$UI.\+h$>$}
+
+
+
+Inheritance diagram for UI\+:
+% FIG 0
+
+
+Collaboration diagram for UI\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_outbutapp_aa6675c1397a8fe1a77661040d1794948}\label{class_outbutapp_aa6675c1397a8fe1a77661040d1794948}} 
+\mbox{\hyperlink{class_outbutapp_aa6675c1397a8fe1a77661040d1794948}{UI}} ()
+\begin{DoxyCompactList}\small\item\em Erstellung eines Standard Konstruktur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_outbutapp_a1612224d94948a212ab0435789100fd5}\label{class_outbutapp_a1612224d94948a212ab0435789100fd5}} 
+void \mbox{\hyperlink{class_outbutapp_a1612224d94948a212ab0435789100fd5}{outbut\+\_\+optionen}} ()
+\begin{DoxyCompactList}\small\item\em Diese Funktion bietet die verschiedene Möglichkeiten um den Strecke zu finden oder die Daten eines Graph\textquotesingle{}s zu ändern oder eine Strecke zu löschen oder eine weitere Strecke hinzufügen durch diese Funktion werden alle die genannten Möglichkeit ausgegeben und und wenn der Nutzer eine Auswahl getroffen hat wird zuerst geguckt ob die Daten einmal geändert worden sind und falls nicht dann werden die Daten aus der Berlin.\+txt gelesen und falls die Daten doch geändert worden sind werden die Daten aus der erstellten Datei test.\+txt gelesen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_outbutapp_a003cc64a54e6fa4d269d3ad4e13b2c7e}{outbut\+\_\+option\+\_\+1\+\_\+fahrtplan}} (int \&isdatechanges)
+\begin{DoxyCompactList}\small\item\em Diese Funktion steht für den ersten Asuswahl eines Fahrtplan dadurch wird eine neue Graph erstellt mit seine Edges und Nodes um den eingegebene Start und Target station in den Graph zu finden und den Fahrplan entsprechend auf der console auszugeben. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_outbutapp_ae7bbfdfd59e38da6b8b3abb7648481a6}{outbut\+\_\+option\+\_\+2\+\_\+\+Data\+\_\+changes}} (int \&x, string \&filepfad)
+\begin{DoxyCompactList}\small\item\em Diese Funktion bietet die möglichkeit Daten zu ändern wie die Name eine Station ode die Distanz einer strecke oder die Dauer und bietet auch die möglichkeit eine station zu löschen und die vorherige und nachherige station zu verbinden damit der Bahn line nicht geschnitten wird und am Ende gibt die geänderte Station für den Nutzer aus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_outbutapp_afcc3f58b1274936eb07649e8feaba1dd}{outbut\+\_\+option\+\_\+3\+\_\+\+Daten\+\_\+add}} (int \&x, string \&filepfad)
+\begin{DoxyCompactList}\small\item\em Diese Funktion bietet der Nutzer an einer neue Station hinzufügen mit ihre distanz und dauer zu den nächsten und vorherigen station falls es gebe und dann werden die geänderte Daten zuerst in test.\+txt ausgegeben damit die Änderung gespeichert wird. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_outbutapp_a908184e8a6570b60587dbcb62e4154de}{outbut\+\_\+option\+\_\+4\+\_\+read\+\_\+from\+\_\+file}} (int \&x, string \&filepfad)
+\begin{DoxyCompactList}\small\item\em Diese Funktion bietet die Möglichkeit dass die Daten aus einer andere Datei auszulesen dafür muss der Nutzer die Dateipname eine Datei der sich in den Objekt Ornder befindet und dann wird daraus die Daten gelsen und die gelesene Daten in test.\+txt ausgegeben damit die Änderung der Daten geseichert werden und dann werden beimnächsten Aufruf die Daten nur aus der geänderten Daten geändert. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_outbutapp_a912f613af9fc727a49bae61bb2f18fb2}{input\+\_\+aoutputprogramm}} (char groessee\+\_\+als, int anzahlzahleneingabe)
+\begin{DoxyCompactList}\small\item\em diese Funktion liest die eingabe von Nutzer als zahlen für den A\+Uswahl eine beliebige Option \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_outbutapp_a86e6bd54dfda928e86ae9631ae6bb732}{input\+\_\+aoutputprogramm\+\_\+3zahlen}} (vector$<$ string $>$ \&anzahlmoeglicheelemnte)
+\begin{DoxyCompactList}\small\item\em Diese Funtktion liest die Eingabe von drei Zahlen oder eine beliebeige Eingabe anzahlmöglichkeiten und falls diese keine Zahlen beinhaltet dann wird ein Exeption ausgegeben. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_outbutapp_abc623133b3b02e1b5b9a71bd799d6f98}{station\+Name\+\_\+changes}} (\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&inputstation, vector$<$ string $>$ \&inputsortieren, vector$<$ string $>$ \&linien, vector$<$ string $>$ \&stationenbegin, vector$<$ string $>$ \&stationenend, vector$<$ double $>$ \&distanz\+\_\+km, vector$<$ int $>$ \&distanz\+\_\+min)
+\begin{DoxyCompactList}\small\item\em Diese Funtkion bietet die Möglichkeit an die Stationname zu ändern und dadurch wird die diese in den Datei test.\+txt ausgegeben damit diese Änderung gespeichert wird und beimnächsten Aufruf werden die Daten aus der Datei test.\+txt gelesen damit die geänderte Version des bahnes gezeigt wird und nicht die standard Version aus Berlin.\+txt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_outbutapp_a4758fd2a6276448b1b8df22a0a513d5a}{distanz\+\_\+und\+\_\+dauer\+\_\+einer\+\_\+strecke\+\_\+andern}} (\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&inputstation, vector$<$ string $>$ \&inputsortieren, vector$<$ string $>$ \&linien, vector$<$ string $>$ \&stationenbegin, vector$<$ string $>$ \&stationenend, vector$<$ double $>$ \&distanz\+\_\+km, vector$<$ int $>$ \&distanz\+\_\+min)
+\begin{DoxyCompactList}\small\item\em Diese Funktion bietet das Ändern von der Dauer und Distanz einer Strecke. A\+Lso diese Funktion bietet die Eingabe der Strecke Nummer und falls diese richtig wäre wird auf den Inhalt der Vector ditanz und dauer zugegriffen und die Daten an den eingegeben Strecken Nummer geändert und dann bietet das Software die die Eingabe der neue Distanz und Dauer dann werden diese neue Daten in den Vector string gepeichtert und die alten gelöscht. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_outbutapp_ab2a969a5796d293bab439bdc8835c36c}{strecke\+\_\+loeschen}} (\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&inputstation, vector$<$ string $>$ \&inputsortieren, vector$<$ string $>$ \&linien, vector$<$ string $>$ \&stationenbegin, vector$<$ string $>$ \&stationenend, vector$<$ double $>$ \&distanz\+\_\+km, vector$<$ int $>$ \&distanz\+\_\+min)
+\begin{DoxyCompactList}\small\item\em Durch diese Funktion wird eine Srtrecke an eine beliebige station gelöscht diese erfolgt durch die Eingabe der Streckennummer und dann wird die Eingabe geprüft und falls das richtig wäre wird diese gelöscht und mit den vorherigen und nachherigen strecken verbindet damit der Bahnline nicht geschnitten wird und das führt zur keine Ausgabe fehler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class erstellt die Ausgabe Programm und bietet verschieden möglichkeiten um die Strecke zu fineden oder Daten eines erstellten Bahnes zu ändern oder hinzufügen Die Klasse erbt die Daten und Implemniterung der Klasse \mbox{\hyperlink{class_inputcopy}{Network}}, womit diese ihnen zur Verfügung stehen.
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_outbutapp_a4758fd2a6276448b1b8df22a0a513d5a}\label{class_outbutapp_a4758fd2a6276448b1b8df22a0a513d5a}} 
+\index{UI@{UI}!distanz\_und\_dauer\_einer\_strecke\_andern@{distanz\_und\_dauer\_einer\_strecke\_andern}}
+\index{distanz\_und\_dauer\_einer\_strecke\_andern@{distanz\_und\_dauer\_einer\_strecke\_andern}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{distanz\_und\_dauer\_einer\_strecke\_andern()}{distanz\_und\_dauer\_einer\_strecke\_andern()}}
+{\footnotesize\ttfamily void UI\+::distanz\+\_\+und\+\_\+dauer\+\_\+einer\+\_\+strecke\+\_\+andern (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&}]{inputstation,  }\item[{vector$<$ string $>$ \&}]{inputsortieren,  }\item[{vector$<$ string $>$ \&}]{linien,  }\item[{vector$<$ string $>$ \&}]{stationenbegin,  }\item[{vector$<$ string $>$ \&}]{stationenend,  }\item[{vector$<$ double $>$ \&}]{distanz\+\_\+km,  }\item[{vector$<$ int $>$ \&}]{distanz\+\_\+min }\end{DoxyParamCaption})}
+
+
+
+Diese Funktion bietet das Ändern von der Dauer und Distanz einer Strecke. A\+Lso diese Funktion bietet die Eingabe der Strecke Nummer und falls diese richtig wäre wird auf den Inhalt der Vector ditanz und dauer zugegriffen und die Daten an den eingegeben Strecken Nummer geändert und dann bietet das Software die die Eingabe der neue Distanz und Dauer dann werden diese neue Daten in den Vector string gepeichtert und die alten gelöscht. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputstation} & Graph in den die Strecken und stationen gespeichert werden \\
+\hline
+{\em inputsortieren} & die alphabetisch zu sortierende Stationennamen die aus der Datein eingelsen werden \\
+\hline
+{\em linien} & die linien namen die aus der Datein eingelsen werden und durch der die Strecken Nummer gefunden wird \\
+\hline
+{\em stationenbegin} & die stationenstart der eingelesenen Strecken \\
+\hline
+{\em stationenend} & die Station target der eingelesenen Strecken \\
+\hline
+{\em distanz\+\_\+km} & der distanz einer Strecke in km der entsprechend der neue Eingeabe an den bestimmtet Position geändert wird \\
+\hline
+{\em distanz\+\_\+min} & die Dauer einer Strecke in min der entsprechend der neue Eingeabe an den bestimmtet Position geändert wird \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_outbutapp_a912f613af9fc727a49bae61bb2f18fb2}\label{class_outbutapp_a912f613af9fc727a49bae61bb2f18fb2}} 
+\index{UI@{UI}!input\_aoutputprogramm@{input\_aoutputprogramm}}
+\index{input\_aoutputprogramm@{input\_aoutputprogramm}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{input\_aoutputprogramm()}{input\_aoutputprogramm()}}
+{\footnotesize\ttfamily int UI\+::input\+\_\+aoutputprogramm (\begin{DoxyParamCaption}\item[{char}]{groessee\+\_\+als,  }\item[{int}]{anzahlzahleneingabe }\end{DoxyParamCaption})}
+
+
+
+diese Funktion liest die eingabe von Nutzer als zahlen für den A\+Uswahl eine beliebige Option 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument()} & falls die eingabe keine int Zahlen ist oder großse als der Auswahlanzhl ist \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em groessee\+\_\+als} & steht für den Anzahl der zu wählende Optionen \\
+\hline
+{\em anzahlzahleneingabe} & steht für die Anzahl der stellen die eingegeben dürfen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+die E\+Ingabe als int Zahl falls keine throw ausgegeben wird 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_outbutapp_a86e6bd54dfda928e86ae9631ae6bb732}\label{class_outbutapp_a86e6bd54dfda928e86ae9631ae6bb732}} 
+\index{UI@{UI}!input\_aoutputprogramm\_3zahlen@{input\_aoutputprogramm\_3zahlen}}
+\index{input\_aoutputprogramm\_3zahlen@{input\_aoutputprogramm\_3zahlen}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{input\_aoutputprogramm\_3zahlen()}{input\_aoutputprogramm\_3zahlen()}}
+{\footnotesize\ttfamily int UI\+::input\+\_\+aoutputprogramm\+\_\+3zahlen (\begin{DoxyParamCaption}\item[{vector$<$ string $>$ \&}]{anzahlmoeglicheelemnte }\end{DoxyParamCaption})}
+
+
+
+Diese Funtktion liest die Eingabe von drei Zahlen oder eine beliebeige Eingabe anzahlmöglichkeiten und falls diese keine Zahlen beinhaltet dann wird ein Exeption ausgegeben. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & falls die Eingabe fehlschlägt oder leer ist oder keine Zahlen beinhaltet \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em anzahlmoeglicheelemnte} & der höchste Zahl der eingegeben werden darf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+die eingelsene Zahl als Int falls kein Exeption ausgegeben wird 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_outbutapp_a003cc64a54e6fa4d269d3ad4e13b2c7e}\label{class_outbutapp_a003cc64a54e6fa4d269d3ad4e13b2c7e}} 
+\index{UI@{UI}!outbut\_option\_1\_fahrtplan@{outbut\_option\_1\_fahrtplan}}
+\index{outbut\_option\_1\_fahrtplan@{outbut\_option\_1\_fahrtplan}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{outbut\_option\_1\_fahrtplan()}{outbut\_option\_1\_fahrtplan()}}
+{\footnotesize\ttfamily void UI\+::outbut\+\_\+option\+\_\+1\+\_\+fahrtplan (\begin{DoxyParamCaption}\item[{int \&}]{isdatechanges }\end{DoxyParamCaption})}
+
+
+
+Diese Funktion steht für den ersten Asuswahl eines Fahrtplan dadurch wird eine neue Graph erstellt mit seine Edges und Nodes um den eingegebene Start und Target station in den Graph zu finden und den Fahrplan entsprechend auf der console auszugeben. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em isdatechanges} & falls die daten geändert worden sind dann werden die Daten aus test.\+txt gelesen \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_outbutapp_ae7bbfdfd59e38da6b8b3abb7648481a6}\label{class_outbutapp_ae7bbfdfd59e38da6b8b3abb7648481a6}} 
+\index{UI@{UI}!outbut\_option\_2\_Data\_changes@{outbut\_option\_2\_Data\_changes}}
+\index{outbut\_option\_2\_Data\_changes@{outbut\_option\_2\_Data\_changes}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{outbut\_option\_2\_Data\_changes()}{outbut\_option\_2\_Data\_changes()}}
+{\footnotesize\ttfamily void UI\+::outbut\+\_\+option\+\_\+2\+\_\+\+Data\+\_\+changes (\begin{DoxyParamCaption}\item[{int \&}]{x,  }\item[{string \&}]{filepfad }\end{DoxyParamCaption})}
+
+
+
+Diese Funktion bietet die möglichkeit Daten zu ändern wie die Name eine Station ode die Distanz einer strecke oder die Dauer und bietet auch die möglichkeit eine station zu löschen und die vorherige und nachherige station zu verbinden damit der Bahn line nicht geschnitten wird und am Ende gibt die geänderte Station für den Nutzer aus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & sind die Daten geädert falls ja dann wird aus text.\+txt gelesen statt Berlin.\+txt \\
+\hline
+{\em filepfad} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_outbutapp_afcc3f58b1274936eb07649e8feaba1dd}\label{class_outbutapp_afcc3f58b1274936eb07649e8feaba1dd}} 
+\index{UI@{UI}!outbut\_option\_3\_Daten\_add@{outbut\_option\_3\_Daten\_add}}
+\index{outbut\_option\_3\_Daten\_add@{outbut\_option\_3\_Daten\_add}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{outbut\_option\_3\_Daten\_add()}{outbut\_option\_3\_Daten\_add()}}
+{\footnotesize\ttfamily void UI\+::outbut\+\_\+option\+\_\+3\+\_\+\+Daten\+\_\+add (\begin{DoxyParamCaption}\item[{int \&}]{x,  }\item[{string \&}]{filepfad }\end{DoxyParamCaption})}
+
+
+
+Diese Funktion bietet der Nutzer an einer neue Station hinzufügen mit ihre distanz und dauer zu den nächsten und vorherigen station falls es gebe und dann werden die geänderte Daten zuerst in test.\+txt ausgegeben damit die Änderung gespeichert wird. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & sind die Daten geädert falls ja dann wird aus text.\+txt gelesen statt Berlin.\+txt \\
+\hline
+{\em filepfad} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_outbutapp_a908184e8a6570b60587dbcb62e4154de}\label{class_outbutapp_a908184e8a6570b60587dbcb62e4154de}} 
+\index{UI@{UI}!outbut\_option\_4\_read\_from\_file@{outbut\_option\_4\_read\_from\_file}}
+\index{outbut\_option\_4\_read\_from\_file@{outbut\_option\_4\_read\_from\_file}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{outbut\_option\_4\_read\_from\_file()}{outbut\_option\_4\_read\_from\_file()}}
+{\footnotesize\ttfamily void UI\+::outbut\+\_\+option\+\_\+4\+\_\+read\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{int \&}]{x,  }\item[{string \&}]{filepfad }\end{DoxyParamCaption})}
+
+
+
+Diese Funktion bietet die Möglichkeit dass die Daten aus einer andere Datei auszulesen dafür muss der Nutzer die Dateipname eine Datei der sich in den Objekt Ornder befindet und dann wird daraus die Daten gelsen und die gelesene Daten in test.\+txt ausgegeben damit die Änderung der Daten geseichert werden und dann werden beimnächsten Aufruf die Daten nur aus der geänderten Daten geändert. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & sind die Daten geädert falls ja dann wird aus text.\+txt gelesen statt Berlin.\+txt \\
+\hline
+{\em filepfad} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_outbutapp_abc623133b3b02e1b5b9a71bd799d6f98}\label{class_outbutapp_abc623133b3b02e1b5b9a71bd799d6f98}} 
+\index{UI@{UI}!stationName\_changes@{stationName\_changes}}
+\index{stationName\_changes@{stationName\_changes}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{stationName\_changes()}{stationName\_changes()}}
+{\footnotesize\ttfamily void UI\+::station\+Name\+\_\+changes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&}]{inputstation,  }\item[{vector$<$ string $>$ \&}]{inputsortieren,  }\item[{vector$<$ string $>$ \&}]{linien,  }\item[{vector$<$ string $>$ \&}]{stationenbegin,  }\item[{vector$<$ string $>$ \&}]{stationenend,  }\item[{vector$<$ double $>$ \&}]{distanz\+\_\+km,  }\item[{vector$<$ int $>$ \&}]{distanz\+\_\+min }\end{DoxyParamCaption})}
+
+
+
+Diese Funtkion bietet die Möglichkeit an die Stationname zu ändern und dadurch wird die diese in den Datei test.\+txt ausgegeben damit diese Änderung gespeichert wird und beimnächsten Aufruf werden die Daten aus der Datei test.\+txt gelesen damit die geänderte Version des bahnes gezeigt wird und nicht die standard Version aus Berlin.\+txt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputstation} & Stehte für den Graph in den die geänderte Daten gespeichert werden \\
+\hline
+{\em inputsortieren} & die alphabetisch zu sortierende Stationennamen die aus der Datein eingelsen werden \\
+\hline
+{\em linien} & die linien namen die aus der Datein eingelsen werden \\
+\hline
+{\em stationenbegin} & die stationenstart der eingelesenen Strecken \\
+\hline
+{\em stationenend} & die Station target der eingelesenen Strecken \\
+\hline
+{\em distanz\+\_\+km} & der distanz einer Strecke in km \\
+\hline
+{\em distanz\+\_\+min} & die Dauer einer Strecke in min \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_outbutapp_ab2a969a5796d293bab439bdc8835c36c}\label{class_outbutapp_ab2a969a5796d293bab439bdc8835c36c}} 
+\index{UI@{UI}!strecke\_loeschen@{strecke\_loeschen}}
+\index{strecke\_loeschen@{strecke\_loeschen}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{strecke\_loeschen()}{strecke\_loeschen()}}
+{\footnotesize\ttfamily void UI\+::strecke\+\_\+loeschen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&}]{inputstation,  }\item[{vector$<$ string $>$ \&}]{inputsortieren,  }\item[{vector$<$ string $>$ \&}]{linien,  }\item[{vector$<$ string $>$ \&}]{stationenbegin,  }\item[{vector$<$ string $>$ \&}]{stationenend,  }\item[{vector$<$ double $>$ \&}]{distanz\+\_\+km,  }\item[{vector$<$ int $>$ \&}]{distanz\+\_\+min }\end{DoxyParamCaption})}
+
+
+
+Durch diese Funktion wird eine Srtrecke an eine beliebige station gelöscht diese erfolgt durch die Eingabe der Streckennummer und dann wird die Eingabe geprüft und falls das richtig wäre wird diese gelöscht und mit den vorherigen und nachherigen strecken verbindet damit der Bahnline nicht geschnitten wird und das führt zur keine Ausgabe fehler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputstation} & Graph in den die Strecken und stationen gespeichert werden \\
+\hline
+{\em inputsortieren} & die alphabetisch zu sortierende Stationennamen die aus der Datein eingelsen werden \\
+\hline
+{\em linien} & die linien namen die aus der Datein eingelsen werden und durch der die Strecken Nummer gefunden wird \\
+\hline
+{\em stationenbegin} & die stationenstart der eingelesenen Strecken \\
+\hline
+{\em stationenend} & die Station target der eingelesenen Strecken \\
+\hline
+{\em distanz\+\_\+km} & der distanz einer Strecke in km \\
+\hline
+{\em distanz\+\_\+min} & die Dauer einer Strecke in min \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ismail/\+Schreibtisch/co-\/ws2021-\/ismail-\/alshuaybi/c23\+\_\+project/include/UI.\+h\item
+/home/ismail/\+Schreibtisch/co-\/ws2021-\/ismail-\/alshuaybi/c23\+\_\+project/include/UI.\+cpp\end{DoxyCompactItemize}

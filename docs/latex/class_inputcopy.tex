@@ -1,0 +1,423 @@
+\hypertarget{class_inputcopy}{}\doxysection{Network Class Reference}
+\label{class_inputcopy}\index{Network@{Network}}
+
+
+Class Erstellung für Das Lesen der Inhalt eines Dateiees und Erstellung eines defualt Projekts Die Inputcopyklasse ist die Bassisklasse für den klass \mbox{\hyperlink{class_outbutapp}{UI}} Die Klasse erbt die Daten und Implemniterung der Klasse \mbox{\hyperlink{class_route}{Route}}, womit diese ihnen zur Verfügung stehen.
+
+
+
+
+{\ttfamily \#include $<$Network.\+h$>$}
+
+
+
+Inheritance diagram for Network\+:
+% FIG 0
+
+
+Collaboration diagram for Network\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_inputcopy_aaa276626be9fc8a87af6063aaebeef08}\label{class_inputcopy_aaa276626be9fc8a87af6063aaebeef08}} 
+\mbox{\hyperlink{class_inputcopy_aaa276626be9fc8a87af6063aaebeef08}{Network}} ()
+\begin{DoxyCompactList}\small\item\em Erstellung eines Standard Konstruktur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inputcopy_a53db9b448610d67417abfe54d7d60668}{inputcopyy}} (string file\+Namee, vector$<$ string $>$ \&linien, vector$<$ string $>$ \&stationen\+Start, vector$<$ string $>$ \&stationen\+Target, vector$<$ double $>$ \&distanz\+Km, vector$<$ int $>$ \&dauer\+Min)
+\begin{DoxyCompactList}\small\item\em liest den Inhalt eine Datei, fügt den zu der übegeben vectoren Bekommt ein Datei name und leere vecktoren Liest den Inhalt und speichert den in den übergebenen Variablen durch Referenz \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inputcopy_a0fb1059809c8671465363697fa93e9b3}{tow\+Vector\+Addition}} (vector$<$ string $>$ vektor1, vector$<$ string $>$ vektor2, vector$<$ string $>$ \&vector12)
+\begin{DoxyCompactList}\small\item\em addierte die übergebene string vectoren und fügt den zur den vector12 zu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inputcopy_af17f46c36341a992004e9cf126989924}{sort\+Stationen}} (vector$<$ string $>$ \&tosortstation)
+\begin{DoxyCompactList}\small\item\em sortiert die übergebene string vector alphapetisch wird gebraucht um die stationen der Bahn zur alphapetisch zu sortieren \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inputcopy_a1df5abb0a9468ccdef25f42e494e6e78}{delete\+Duplicated\+Station}} (vector$<$ string $>$ \&to\+Deletedopplestation)
+\begin{DoxyCompactList}\small\item\em löscht die Stationen die verdoppelt gespeichert worden sind \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inputcopy_aedf652e6809fef31fc6633a1c9f83310}{station\+Save\+From\+File\+To\+String\+Vector}} (string filenamee, vector$<$ string $>$ \&linien, vector$<$ string $>$ \&stationenbegin, vector$<$ string $>$ \&stationenend, vector$<$ double $>$ \&distanz\+\_\+km, vector$<$ int $>$ \&distanz\+\_\+min, vector$<$ string $>$ \&stationsortiert)
+\begin{DoxyCompactList}\small\item\em Diese Funktion sammelt die Inhalte eines Bahnprojekts durch das lesen aus einer Datei und das Speicher der Inhalt in den bestimmten vectoren um damit arbeiten zu können. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inputcopy_ac7d16133e8bf7e754380ee203e09fe97}{print\+Stationen\+Nodes}} (\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&stationen)
+\begin{DoxyCompactList}\small\item\em druckt die bahn Stationen einer beliebige Grapgh aus \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inputcopy_aaecdbee4d5f624883cfae221a73ce82a}{print\+Route}} (\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&strecken)
+\begin{DoxyCompactList}\small\item\em druckt die strecken eine Graph aus \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_inputcopy_a1ed051fb5df83e3e217e00f1251bc987}{getline}} ()
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_inputcopy_a2fd4e0a9896f3c6c8425b2ef1a14d2e3}{get\+Station\+Start}} ()
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_inputcopy_a6f615f9b16976c8758746d5ee036eece}{get\+Station\+Target}} ()
+\item 
+vector$<$ double $>$ \mbox{\hyperlink{class_inputcopy_a4ee1ece12e985ff50e60c203bb9a154e}{get\+Distanz}} ()
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_inputcopy_a3ebc685fe1a34fcaedf8b5bc4af69950}{get\+Duration}} ()
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_inputcopy_aeb805e33f06d2afab6746779fa751fe3}{get\+Station}} ()
+\item 
+void \mbox{\hyperlink{class_inputcopy_a5bc613a4d16c4d50ef6d20c8626218fa}{node\+Defintion}} (\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&nodeingraphtodefintion, vector$<$ string $>$ \&inputsortieren)
+\begin{DoxyCompactList}\small\item\em definiert die übergeben alphapetisch sortierte Stationen in den übergeben Graph \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inputcopy_a9c71c332dcd8add4b52ba0ffebe14877}{define\+Route\+By\+Ditanz}} (\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&inputstation, vector$<$ string $>$ \&linien, vector$<$ string $>$ \&stationenbegin, vector$<$ string $>$ \&stationenend, vector$<$ double $>$ \&distanz\+\_\+km, vector$<$ int $>$ \&distanz\+\_\+min)
+\begin{DoxyCompactList}\small\item\em definiert die übergebene Inhalte als strecken in den übergebene Graph \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inputcopy_a8961f4cbc6c06eacc58a61ce7938f5af}{input\+Start\+Target}} (int \&start, int \&target)
+\begin{DoxyCompactList}\small\item\em diese Funktion nimmt die Eingabe als nummer der Station und wndelt dieser zur int und gibt diese zurück \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgl_1_1_node}{Node}} \& \mbox{\hyperlink{class_inputcopy_a55be655df45d68d4085c0433fc6fa474}{find\+Node}} (\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&input, int \&station, vector$<$ string $>$ \&inputsort)
+\begin{DoxyCompactList}\small\item\em nimmt die Nummer der Station und sucht nach dem bestemten Node in den übergebene Graph \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inputcopy_a438a089a5a2e7af505574c15bc0b1376}{is\+Linechange}} (deque$<$ \mbox{\hyperlink{classgl_1_1_edge}{Edge}} $\ast$ $>$ \&fahrplan, int \&total\+\_\+time, vector$<$ string $>$ \&umsteigdauer)
+\item 
+void \mbox{\hyperlink{class_inputcopy_acfc712d1757259d1ccef3a22a6e6b32f}{print\+Travel\+Plan}} (deque$<$ \mbox{\hyperlink{classgl_1_1_edge}{Edge}} $\ast$ $>$ \&fahrplan, int \&time, double \&distanz, vector$<$ string $>$ \&umsteigdauer)
+\begin{DoxyCompactList}\small\item\em druckt die Inhalt der strecken aus dem Fahplan durch die Ntzung der dijekstra Funktion und addiert 10 minuten zu den gesammten dauer falls eine umstieg gebe \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inputcopy_a280bdc569a466665e660d14f93b9015d}{Station\+Reading\+From\+Berlintxtfile\+And\+Nodeand\+Edges\+Defintion}} (\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&inputstation, string \&filenameee)
+\begin{DoxyCompactList}\small\item\em diese Funktion liest die mögliche Inhalte aus der Datei Berlin.\+txt und speichert die Inahlte in den bestimmten vecktoren um eine mögliche Fahrplan zu erstellen dadurch wird ein gesammte Graph mit deine Ubah linen uns stationen und strcken erstellt \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inputcopy_a4a0572245be0b31669bf5824014d0325}{creat\+Defualt\+Subway}} (string \&filenamee)
+\begin{DoxyCompactList}\small\item\em erstellt eine Graph aus der übergebene Datei \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class Erstellung für Das Lesen der Inhalt eines Dateiees und Erstellung eines defualt Projekts Die Inputcopyklasse ist die Bassisklasse für den klass \mbox{\hyperlink{class_outbutapp}{UI}} Die Klasse erbt die Daten und Implemniterung der Klasse \mbox{\hyperlink{class_route}{Route}}, womit diese ihnen zur Verfügung stehen.
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_inputcopy_a4a0572245be0b31669bf5824014d0325}\label{class_inputcopy_a4a0572245be0b31669bf5824014d0325}} 
+\index{Network@{Network}!creatDefualtSubway@{creatDefualtSubway}}
+\index{creatDefualtSubway@{creatDefualtSubway}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{creatDefualtSubway()}{creatDefualtSubway()}}
+{\footnotesize\ttfamily void Network\+::creat\+Defualt\+Subway (\begin{DoxyParamCaption}\item[{string \&}]{filenamee }\end{DoxyParamCaption})}
+
+
+
+erstellt eine Graph aus der übergebene Datei 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & gegebene Dateiname aus der die Daten gelsen werden \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_inputcopy_a9c71c332dcd8add4b52ba0ffebe14877}\label{class_inputcopy_a9c71c332dcd8add4b52ba0ffebe14877}} 
+\index{Network@{Network}!defineRouteByDitanz@{defineRouteByDitanz}}
+\index{defineRouteByDitanz@{defineRouteByDitanz}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{defineRouteByDitanz()}{installRoute()}}
+{\footnotesize\ttfamily void Network\+::define\+Route\+By\+Ditanz (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&}]{inputstation,  }\item[{vector$<$ string $>$ \&}]{linien,  }\item[{vector$<$ string $>$ \&}]{stationenbegin,  }\item[{vector$<$ string $>$ \&}]{stationenend,  }\item[{vector$<$ double $>$ \&}]{distanz\+\_\+km,  }\item[{vector$<$ int $>$ \&}]{distanz\+\_\+min }\end{DoxyParamCaption})}
+
+
+
+definiert die übergebene Inhalte als strecken in den übergebene Graph 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputstation} & Graph in welche die strecken definiert werden \\
+\hline
+{\em linien} & Bahn linien die in den Bahn gespeichert werden \\
+\hline
+{\em stationenbegin} & stationen start einer zu defniernde strecke \\
+\hline
+{\em stationenend} & stationen target einer zu defniernde strecke \\
+\hline
+{\em distanz\+\_\+km} & distanz einer zu defniernde strecke in km \\
+\hline
+{\em distanz\+\_\+min} & dauer einer zu defniernde strecke in min \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_inputcopy_a1df5abb0a9468ccdef25f42e494e6e78}\label{class_inputcopy_a1df5abb0a9468ccdef25f42e494e6e78}} 
+\index{Network@{Network}!deleteDuplicatedStation@{deleteDuplicatedStation}}
+\index{deleteDuplicatedStation@{deleteDuplicatedStation}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{deleteDuplicatedStation()}{deleteDuplicatedStation()}}
+{\footnotesize\ttfamily void Network\+::delete\+Duplicated\+Station (\begin{DoxyParamCaption}\item[{vector$<$ string $>$ \&}]{to\+Deletedopplestation }\end{DoxyParamCaption})}
+
+
+
+löscht die Stationen die verdoppelt gespeichert worden sind 
+
+\href{https://qastack.com.de/programming/1041620/whats-the-most-efficient-way-to-erase-duplicates-and-sort-a-vector}{\texttt{ https\+://qastack.\+com.\+de/programming/1041620/whats-\/the-\/most-\/efficient-\/way-\/to-\/erase-\/duplicates-\/and-\/sort-\/a-\/vector}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+Deletedopplestation} & string vector aus der die wiederholende stationen gelöscht werden \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_inputcopy_a55be655df45d68d4085c0433fc6fa474}\label{class_inputcopy_a55be655df45d68d4085c0433fc6fa474}} 
+\index{Network@{Network}!findNode@{findNode}}
+\index{findNode@{findNode}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{findNode()}{findNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgl_1_1_node}{Node}} \& Network\+::find\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&}]{input,  }\item[{int \&}]{station,  }\item[{vector$<$ string $>$ \&}]{inputsort }\end{DoxyParamCaption})}
+
+
+
+nimmt die Nummer der Station und sucht nach dem bestemten Node in den übergebene Graph 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Name der Prapg in dem sich der bestimmte Node befindet \\
+\hline
+{\em station} & die Station die den namen der alphapetisch sortierte stationen beinhaltet \\
+\hline
+{\em inputsort} & die Station die den namen der alphapetisch sortierte stationen beinhaltet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Node der gesucht Node/ station 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_inputcopy_a4ee1ece12e985ff50e60c203bb9a154e}\label{class_inputcopy_a4ee1ece12e985ff50e60c203bb9a154e}} 
+\index{Network@{Network}!getDistanz@{getDistanz}}
+\index{getDistanz@{getDistanz}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{getDistanz()}{getDistanz()}}
+{\footnotesize\ttfamily vector$<$double$>$ Network\+::get\+Distanz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+die distanz aller strecken in km 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_inputcopy_a3ebc685fe1a34fcaedf8b5bc4af69950}\label{class_inputcopy_a3ebc685fe1a34fcaedf8b5bc4af69950}} 
+\index{Network@{Network}!getDuration@{getDuration}}
+\index{getDuration@{getDuration}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{getDuration()}{getDuration()}}
+{\footnotesize\ttfamily vector$<$int$>$ Network\+::get\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+die dauer aller strecken in min 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_inputcopy_a1ed051fb5df83e3e217e00f1251bc987}\label{class_inputcopy_a1ed051fb5df83e3e217e00f1251bc987}} 
+\index{Network@{Network}!getline@{getline}}
+\index{getline@{getline}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{getline()}{getline()}}
+{\footnotesize\ttfamily vector$<$string$>$ Network\+::getline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+die linen eines bahnes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_inputcopy_aeb805e33f06d2afab6746779fa751fe3}\label{class_inputcopy_aeb805e33f06d2afab6746779fa751fe3}} 
+\index{Network@{Network}!getStation@{getStation}}
+\index{getStation@{getStation}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{getStation()}{getStation()}}
+{\footnotesize\ttfamily vector$<$string$>$ Network\+::get\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+die alphapetisch srtierte stationen eines bahnes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_inputcopy_a2fd4e0a9896f3c6c8425b2ef1a14d2e3}\label{class_inputcopy_a2fd4e0a9896f3c6c8425b2ef1a14d2e3}} 
+\index{Network@{Network}!getStationStart@{getStationStart}}
+\index{getStationStart@{getStationStart}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{getStationStart()}{getStationStart()}}
+{\footnotesize\ttfamily vector$<$string$>$ Network\+::get\+Station\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+die startstation aller strecken 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_inputcopy_a6f615f9b16976c8758746d5ee036eece}\label{class_inputcopy_a6f615f9b16976c8758746d5ee036eece}} 
+\index{Network@{Network}!getStationTarget@{getStationTarget}}
+\index{getStationTarget@{getStationTarget}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{getStationTarget()}{getStationTarget()}}
+{\footnotesize\ttfamily vector$<$string$>$ Network\+::get\+Station\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+die targetstation aller strecken 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_inputcopy_a53db9b448610d67417abfe54d7d60668}\label{class_inputcopy_a53db9b448610d67417abfe54d7d60668}} 
+\index{Network@{Network}!inputcopyy@{inputcopyy}}
+\index{inputcopyy@{inputcopyy}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{inputcopyy()}{inputcopyy()}}
+{\footnotesize\ttfamily void Network\+::fileReading (\begin{DoxyParamCaption}\item[{string}]{file\+Namee,  }\item[{vector$<$ string $>$ \&}]{linien,  }\item[{vector$<$ string $>$ \&}]{stationen\+Start,  }\item[{vector$<$ string $>$ \&}]{stationen\+Target,  }\item[{vector$<$ double $>$ \&}]{distanz\+Km,  }\item[{vector$<$ int $>$ \&}]{dauer\+Min }\end{DoxyParamCaption})}
+
+
+
+liest den Inhalt eine Datei, fügt den zu der übegeben vectoren Bekommt ein Datei name und leere vecktoren Liest den Inhalt und speichert den in den übergebenen Variablen durch Referenz 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em cerr} & falls eingegebene Datei nicht geöffnet werden kann \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Namee} & übergebene Dateiname aus der die Daten eingelesen werden \\
+\hline
+{\em linien} & Bahn linien welche aus der Datei eingelsen werden \\
+\hline
+{\em stationen\+Start} & der Startstation alle Strecken \\
+\hline
+{\em stationen\+Target} & der target/\+Ziel alle Routers \\
+\hline
+{\em distanz\+Km} & der Distanz alle strecken in kilometer \\
+\hline
+{\em dauer\+Min} & die dauer alle Strecken in Minute \\
+\hline
+\end{DoxyParams}
+löscht das \+: zeichen von den string\mbox{\Hypertarget{class_inputcopy_a8961f4cbc6c06eacc58a61ce7938f5af}\label{class_inputcopy_a8961f4cbc6c06eacc58a61ce7938f5af}} 
+\index{Network@{Network}!inputStartTarget@{inputStartTarget}}
+\index{inputStartTarget@{inputStartTarget}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{inputStartTarget()}{readCheckup()}}
+{\footnotesize\ttfamily void Network\+::input\+Start\+Target (\begin{DoxyParamCaption}\item[{int \&}]{start,  }\item[{int \&}]{target }\end{DoxyParamCaption})}
+
+
+
+diese Funktion nimmt die Eingabe als nummer der Station und wndelt dieser zur int und gibt diese zurück 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & Nummer der startstation \\
+\hline
+{\em target} & Nummer der target Station \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_inputcopy_a438a089a5a2e7af505574c15bc0b1376}\label{class_inputcopy_a438a089a5a2e7af505574c15bc0b1376}} 
+\index{Network@{Network}!isLinechange@{isLinechange}}
+\index{isLinechange@{isLinechange}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{isLinechange()}{isLinechange()}}
+{\footnotesize\ttfamily void Network\+::is\+Linechange (\begin{DoxyParamCaption}\item[{deque$<$ \mbox{\hyperlink{classgl_1_1_edge}{Edge}} $\ast$ $>$ \&}]{fahrplan,  }\item[{int \&}]{total\+\_\+time,  }\item[{vector$<$ string $>$ \&}]{umsteigdauer }\end{DoxyParamCaption})}
+
+Diese Funktion überprüft ob ein umstieg gibt und falls ja addiert die dauer 10 minuten 
+\begin{DoxyParams}{Parameters}
+{\em fahrplan} & beinhaltet die Fahrplan bzw. die Strecken des Fahrplanes als vecktor \\
+\hline
+{\em total\+\_\+time} & die Dauer der Fahrt \\
+\hline
+{\em umsteigdauer} & speichert die line der strecken der fahrplan um zu gcken ob ein umstieg gebe oder nicht \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_inputcopy_a5bc613a4d16c4d50ef6d20c8626218fa}\label{class_inputcopy_a5bc613a4d16c4d50ef6d20c8626218fa}} 
+\index{Network@{Network}!nodeDefintion@{nodeDefintion}}
+\index{nodeDefintion@{nodeDefintion}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{nodeDefintion()}{installNode()}}
+{\footnotesize\ttfamily void Network\+::node\+Defintion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&}]{nodeingraphtodefintion,  }\item[{vector$<$ string $>$ \&}]{inputsortieren }\end{DoxyParamCaption})}
+
+
+
+definiert die übergeben alphapetisch sortierte Stationen in den übergeben Graph 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodeingraphtodefintion} & Graph in der die übergebene Stationen definiert werden \\
+\hline
+{\em inputsortieren} & übergebene alpahpetisch sortierte Stationen \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_inputcopy_aaecdbee4d5f624883cfae221a73ce82a}\label{class_inputcopy_aaecdbee4d5f624883cfae221a73ce82a}} 
+\index{Network@{Network}!printRoute@{printRoute}}
+\index{printRoute@{printRoute}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{printRoute()}{printRoute()}}
+{\footnotesize\ttfamily void Network\+::print\+Route (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&}]{strecken }\end{DoxyParamCaption})}
+
+
+
+druckt die strecken eine Graph aus 
+
+
+\begin{DoxyParams}{Parameters}
+{\em strecken} & Name des Graphes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_inputcopy_ac7d16133e8bf7e754380ee203e09fe97}\label{class_inputcopy_ac7d16133e8bf7e754380ee203e09fe97}} 
+\index{Network@{Network}!printStationenNodes@{printStationenNodes}}
+\index{printStationenNodes@{printStationenNodes}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{printStationenNodes()}{printNodes()}}
+{\footnotesize\ttfamily void Network\+::print\+Stationen\+Nodes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&}]{stationen }\end{DoxyParamCaption})}
+
+
+
+druckt die bahn Stationen einer beliebige Grapgh aus 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stationen} & die Name des Graphes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_inputcopy_acfc712d1757259d1ccef3a22a6e6b32f}\label{class_inputcopy_acfc712d1757259d1ccef3a22a6e6b32f}} 
+\index{Network@{Network}!printTravelPlan@{printTravelPlan}}
+\index{printTravelPlan@{printTravelPlan}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{printTravelPlan()}{optimizeDuration()}}
+{\footnotesize\ttfamily void Network\+::print\+Travel\+Plan (\begin{DoxyParamCaption}\item[{deque$<$ \mbox{\hyperlink{classgl_1_1_edge}{Edge}} $\ast$ $>$ \&}]{fahrplan,  }\item[{int \&}]{time,  }\item[{double \&}]{distanz,  }\item[{vector$<$ string $>$ \&}]{umsteigdauer }\end{DoxyParamCaption})}
+
+
+
+druckt die Inhalt der strecken aus dem Fahplan durch die Ntzung der dijekstra Funktion und addiert 10 minuten zu den gesammten dauer falls eine umstieg gebe 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fahrplan} & die zu ausdrückende Fahrplan \\
+\hline
+{\em time} & die zu ausdruckende totaltime der Fahrtplan \\
+\hline
+{\em distanz} & die zu ausdruckende totaltime der Fahrtplan \\
+\hline
+{\em umsteigdauer} & beinhaltet die alle linien der Fahrplan um zu gucken ob die line sich ändert und dadurch 10 min zu den totaltime zu addieren \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_inputcopy_af17f46c36341a992004e9cf126989924}\label{class_inputcopy_af17f46c36341a992004e9cf126989924}} 
+\index{Network@{Network}!sortStationen@{sortStationen}}
+\index{sortStationen@{sortStationen}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{sortStationen()}{alphapetischsortieren()}}
+{\footnotesize\ttfamily void Network\+::sort\+Stationen (\begin{DoxyParamCaption}\item[{vector$<$ string $>$ \&}]{tosortstation }\end{DoxyParamCaption})}
+
+
+
+sortiert die übergebene string vector alphapetisch wird gebraucht um die stationen der Bahn zur alphapetisch zu sortieren 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tosortstation} & der alphapetisch zusortiernde string vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_inputcopy_a280bdc569a466665e660d14f93b9015d}\label{class_inputcopy_a280bdc569a466665e660d14f93b9015d}} 
+\index{Network@{Network}!StationReadingFromBerlintxtfileAndNodeandEdgesDefintion@{StationReadingFromBerlintxtfileAndNodeandEdgesDefintion}}
+\index{StationReadingFromBerlintxtfileAndNodeandEdgesDefintion@{StationReadingFromBerlintxtfileAndNodeandEdgesDefintion}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{StationReadingFromBerlintxtfileAndNodeandEdgesDefintion()}{StationReadingFromBerlintxtfileAndNodeandEdgesDefintion()}}
+{\footnotesize\ttfamily void Network\+::\+Station\+Reading\+From\+Berlintxtfile\+And\+Nodeand\+Edges\+Defintion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&}]{inputstation,  }\item[{string \&}]{filenameee }\end{DoxyParamCaption})}
+
+
+
+diese Funktion liest die mögliche Inhalte aus der Datei Berlin.\+txt und speichert die Inahlte in den bestimmten vecktoren um eine mögliche Fahrplan zu erstellen dadurch wird ein gesammte Graph mit deine Ubah linen uns stationen und strcken erstellt 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputstation} & Graph in den die Linien und stationen und strecken definiert werden \\
+\hline
+{\em filenameee} & Di Dateiname aus der die Daten gelesen werden \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_inputcopy_aedf652e6809fef31fc6633a1c9f83310}\label{class_inputcopy_aedf652e6809fef31fc6633a1c9f83310}} 
+\index{Network@{Network}!stationSaveFromFileToStringVector@{stationSaveFromFileToStringVector}}
+\index{stationSaveFromFileToStringVector@{stationSaveFromFileToStringVector}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{stationSaveFromFileToStringVector()}{stationSaveFromFileToStringVector()}}
+{\footnotesize\ttfamily void Network\+::station\+Save\+From\+File\+To\+String\+Vector (\begin{DoxyParamCaption}\item[{string}]{filenamee,  }\item[{vector$<$ string $>$ \&}]{linien,  }\item[{vector$<$ string $>$ \&}]{stationenbegin,  }\item[{vector$<$ string $>$ \&}]{stationenend,  }\item[{vector$<$ double $>$ \&}]{distanz\+\_\+km,  }\item[{vector$<$ int $>$ \&}]{distanz\+\_\+min,  }\item[{vector$<$ string $>$ \&}]{stationsortiert }\end{DoxyParamCaption})}
+
+
+
+Diese Funktion sammelt die Inhalte eines Bahnprojekts durch das lesen aus einer Datei und das Speicher der Inhalt in den bestimmten vectoren um damit arbeiten zu können. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filenamee} & der übergebene Dateiname aus der die Daten gelesen werden \\
+\hline
+{\em linien} & in den wird die Bahn linien gespeichert \\
+\hline
+{\em stationenbegin} & der Startstation alle Strecken \\
+\hline
+{\em stationenend} & der target/\+Ziel alle Routers \\
+\hline
+{\em distanz\+\_\+km} & der Distanz alle strecken in kilometer \\
+\hline
+{\em distanz\+\_\+min} & die dauer alle Strecken in Minute \\
+\hline
+{\em stationsortiert} & Stetionen die alphapetisch gespeichert werden und wiederholende Stationen gelöscht werden \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_inputcopy_a0fb1059809c8671465363697fa93e9b3}\label{class_inputcopy_a0fb1059809c8671465363697fa93e9b3}} 
+\index{Network@{Network}!towVectorAddition@{towVectorAddition}}
+\index{towVectorAddition@{towVectorAddition}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{towVectorAddition()}{towVectorAddition()}}
+{\footnotesize\ttfamily void Network\+::tow\+Vector\+Addition (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{vektor1,  }\item[{vector$<$ string $>$}]{vektor2,  }\item[{vector$<$ string $>$ \&}]{vector12 }\end{DoxyParamCaption})}
+
+
+
+addierte die übergebene string vectoren und fügt den zur den vector12 zu 
+
+fügt die bedien verktoren stationanfang und end zusammen
+
+
+\begin{DoxyParams}{Parameters}
+{\em vektor1} & übergebene string vector1 welche addiert wird \\
+\hline
+{\em vektor2} & übergebene sring vector2 welche addiert wird \\
+\hline
+{\em vector12} & summe der Addition der string vectoren wird in dieses Vector gespeichert \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ismail/\+Schreibtisch/co-\/ws2021-\/ismail-\/alshuaybi/c23\+\_\+project/include/Network.\+h\item
+/home/ismail/\+Schreibtisch/co-\/ws2021-\/ismail-\/alshuaybi/c23\+\_\+project/include/Network.\+cpp\end{DoxyCompactItemize}

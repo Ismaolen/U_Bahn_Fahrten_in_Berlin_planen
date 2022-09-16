@@ -1,6 +1,6 @@
 #pragma once
 #include "node.h"
-
+#include <string>
 //! @file edge.h
 //! @version 1.0
 //! @author Carsten Thomas
@@ -45,7 +45,9 @@ namespace gl
 		//! Currently set to 1.0, so the shortest path algorithm searches for the path with the least number of edges involved.
 		//! @todo This function must be overwritten to adapt the behavior of the Djikstra algorithm
 		//! @return  @b double the value representing the weight (or distance or cost) of the edge
-		virtual double weight() const { return 1.0; }
+        virtual double weight() const { return 1.0; }
+        virtual int time() const { return 1; }
+        virtual std::string line() const { return "1"; }
 
 		//! @brief Streaming operator as friend function, streaming the return value of the name() function to the output stream
 		//! @return @b std::ostream& reference to the output stream

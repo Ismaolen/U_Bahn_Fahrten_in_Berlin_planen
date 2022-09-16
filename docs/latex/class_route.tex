@@ -1,0 +1,85 @@
+\hypertarget{class_route}{}\doxysection{Route Class Reference}
+\label{class_route}\index{Route@{Route}}
+
+
+class specializing class edge into a unidirectional route, with distance as a member variable distance is also used to define the weight of the route, thereby influencing the Dijkstra search for the shortest path  
+
+
+
+
+Inheritance diagram for Route\+:
+% FIG 0
+
+
+Collaboration diagram for Route\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_route_a3f7438be84c530bc8d5010f2d1d4152f}\label{class_route_a3f7438be84c530bc8d5010f2d1d4152f}} 
+{\bfseries Route} (\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&g, \mbox{\hyperlink{classgl_1_1_node}{Node}} \&src, \mbox{\hyperlink{classgl_1_1_node}{Node}} \&dst, double distance)
+\item 
+virtual double \mbox{\hyperlink{class_route_a0967037f403d84f11669e1da09448431}{weight}} () const
+\begin{DoxyCompactList}\small\item\em Virtual constant member function defining the weight (or distance, or cost) of the edge Currently set to 1.\+0, so the shortest path algorithm searches for the path with the least number of edges involved. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_route_a4085ba9e8acdaca8a703fd42cf64ebe8}\label{class_route_a4085ba9e8acdaca8a703fd42cf64ebe8}} 
+{\bfseries Route} (\mbox{\hyperlink{classgl_1_1_graph}{Graph}} \&g, string line, \mbox{\hyperlink{classgl_1_1_node}{Node}} \&src, \mbox{\hyperlink{classgl_1_1_node}{Node}} \&dst, double distance, int minute)
+\item 
+virtual double \mbox{\hyperlink{class_route_a0967037f403d84f11669e1da09448431}{weight}} () const
+\begin{DoxyCompactList}\small\item\em Virtual constant member function defining the weight (or distance, or cost) of the edge Currently set to 1.\+0, so the shortest path algorithm searches for the path with the least number of edges involved. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_route_a7f9566efd919ff1af261c38f68108b9e}\label{class_route_a7f9566efd919ff1af261c38f68108b9e}} 
+virtual int {\bfseries time} () const
+\item 
+\mbox{\Hypertarget{class_route_a2935f01733dbf20d59528d3e5e3ef6b0}\label{class_route_a2935f01733dbf20d59528d3e5e3ef6b0}} 
+virtual string {\bfseries line} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+class specializing class edge into a unidirectional route, with distance as a member variable distance is also used to define the weight of the route, thereby influencing the Dijkstra search for the shortest path 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_route_a0967037f403d84f11669e1da09448431}\label{class_route_a0967037f403d84f11669e1da09448431}} 
+\index{Route@{Route}!weight@{weight}}
+\index{weight@{weight}!Route@{Route}}
+\doxysubsubsection{\texorpdfstring{weight()}{weight()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual double Route\+::weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual constant member function defining the weight (or distance, or cost) of the edge Currently set to 1.\+0, so the shortest path algorithm searches for the path with the least number of edges involved. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]This function must be overwritten to adapt the behavior of the Djikstra algorithm \end{DoxyRefDesc}
+\begin{DoxyReturn}{Returns}
+{\bfseries{double}} the value representing the weight (or distance or cost) of the edge 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classgl_1_1_edge_acbf0d9e4e89497298783559a0210286e}{gl\+::\+Edge}}.
+
+\mbox{\Hypertarget{class_route_a0967037f403d84f11669e1da09448431}\label{class_route_a0967037f403d84f11669e1da09448431}} 
+\index{Route@{Route}!weight@{weight}}
+\index{weight@{weight}!Route@{Route}}
+\doxysubsubsection{\texorpdfstring{weight()}{weight()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual double Route\+::weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual constant member function defining the weight (or distance, or cost) of the edge Currently set to 1.\+0, so the shortest path algorithm searches for the path with the least number of edges involved. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]This function must be overwritten to adapt the behavior of the Djikstra algorithm \end{DoxyRefDesc}
+\begin{DoxyReturn}{Returns}
+{\bfseries{double}} the value representing the weight (or distance or cost) of the edge 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classgl_1_1_edge_acbf0d9e4e89497298783559a0210286e}{gl\+::\+Edge}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ismail/\+Schreibtisch/co-\/ws2021-\/ismail-\/alshuaybi/c23\+\_\+project/\+Graph\+Lib\+Use/\mbox{\hyperlink{_graph_lib_use_2main_8cpp}{main.\+cpp}}\item 
+/home/ismail/\+Schreibtisch/co-\/ws2021-\/ismail-\/alshuaybi/c23\+\_\+project/include/Route.\+h\end{DoxyCompactItemize}
